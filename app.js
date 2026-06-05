@@ -8,7 +8,7 @@ const LOCAL_SERVER = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
 
 let TALK = null;       // 当前演讲数据
 let segStart = 0, segEnd = 0, cur = 0;
-let zhVisible = false;
+let subMode = "bi";   // 字幕模式：bi=中英双字幕  en=仅英文
 let recognizing = false;
 let recog = null;
 let mode = "local";   // local=本地原片  online=在线YouTube
@@ -87,9 +87,7 @@ function renderSegOptions(){
 function renderSentence(){
   const s=TALK.sentences[cur];
   $("sentIndex").textContent="#"+(cur+1)+" / "+TALK.count;
-  $("sentEn").textContent=s.en;
-  $("sentZh").textContent=s.zh;
-  $("sentZh").classList.toggle("hidden", !zhVisible);
+  applySubtitle(s);
   $("result").classList.add("hidden");
   $("prevBtn").disabled = cur<=segStart;
   $("nextBtn").disabled = cur>=segEnd;
@@ -262,6 +260,36 @@ function onSegChange(){
   renderSentence();
 }
 
+/* ---------- 字幕模式：中英双字幕 / 仅英文（缺中文时即时生成） ---------- */
+function trCacheGet(en){ try{ return (JSON.parse(localStorage.getItem("ted_tr")||"{}"))[en]; }catch(e){ return null; } }
+function trCacheSet(en,zh){ try{ const o=JSON.parse(localStorage.getItem("ted_tr")||"{}"); o[en]=zh; localStorage.setItem("ted_tr", JSON.stringify(o)); }catch(e){} }
+
+function applySubtitle(s){
+  $("sentEn").textContent=s.en;
+  const zhEl=$("sentZh");
+  if(subMode==="en"){ zhEl.classList.add("hidden"); return; }
+  zhEl.classList.remove("hidden");
+  if(s.zh){ zhEl.textContent=s.zh; return; }
+  const cached=trCacheGet(s.en);
+  if(cached){ s.zh=cached; zhEl.textContent=cached; return; }
+  if(LOCAL_SERVER){ zhEl.textContent="（生成中文中…）"; translateSentence(s); }
+  else { zhEl.textContent="（在线版无法自动生成中文；本机版可，或用手动字幕的 || 提供）"; }
+}
+async function translateSentence(s){
+  try{
+    const res=await fetch("/translate?q="+encodeURIComponent(s.en)+"&tl=zh-CN");
+    const d=await res.json();
+    if(d.ok && d.zh){ s.zh=d.zh; trCacheSet(s.en, d.zh); if(TALK && TALK.sentences[cur]===s && subMode!=="en"){ $("sentZh").textContent=d.zh; } }
+    else if(TALK && TALK.sentences[cur]===s && subMode!=="en"){ $("sentZh").textContent="（翻译失败，可重试）"; }
+  }catch(e){ if(TALK && TALK.sentences[cur]===s && subMode!=="en"){ $("sentZh").textContent="（翻译失败，可重试）"; } }
+}
+function setSub(m){
+  subMode=m; try{ localStorage.setItem("ted_submode", m); }catch(e){}
+  $("subBi").classList.toggle("active", m==="bi");
+  $("subEn").classList.toggle("active", m==="en");
+  if(TALK) applySubtitle(TALK.sentences[cur]);
+}
+
 /* ---------- YouTube 在线学习 ---------- */
 function setMediaLocal(url){
   const f=$("ytframe"); if(f){ f.src="about:blank"; f.style.display="none"; }
@@ -301,7 +329,6 @@ function startYouTubeTalk(id, title, rawSentences){
   sentences.forEach((s,i)=>s.i=i);
   const segs=[]; for(let s=0; s*10<sentences.length; s++){ segs.push({name:"第"+(s+1)+"段", start:s*10, end:Math.min(s*10+9, sentences.length-1)}); }
   TALK={ id:"yt_"+id, title, category:"YouTube", folder:null, video:null, audio:null, sentences, segments:segs, count:sentences.length };
-  zhVisible=false; $("sentZh").classList.add("hidden");
   renderSegOptions(); $("segSelect").value=0; onSegChange();
 }
 async function ytLoad(){
@@ -383,7 +410,11 @@ function init(){
   $("prevBtn").onclick=()=>{ if(cur>segStart){cur--;renderSentence();} };
   $("nextBtn").onclick=()=>{ if(cur<segEnd){cur++;renderSentence();} };
   $("ttsBtn").onclick=speak;
-  $("zhToggle").onclick=()=>{ zhVisible=!zhVisible; $("sentZh").classList.toggle("hidden",!zhVisible); };
+  subMode = (localStorage.getItem("ted_submode")||"bi");
+  $("subBi").classList.toggle("active", subMode==="bi");
+  $("subEn").classList.toggle("active", subMode==="en");
+  $("subBi").onclick=()=>setSub("bi");
+  $("subEn").onclick=()=>setSub("en");
   $("errBtn").onclick=openErr;
   $("closeErr").onclick=closeErr;
   $("mask").onclick=()=>{ closeErr(); closeYt(); };

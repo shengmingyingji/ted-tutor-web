@@ -56,8 +56,11 @@ main{display:flex; gap:20px; padding:20px; flex:1; flex-wrap:wrap; align-items:f
 .card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px}
 .card-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:12px}
 .sent-index{color:var(--dim); font-size:14px}
-.card-tools{display:flex; gap:8px}
+.card-tools{display:flex; gap:8px; align-items:center}
 .card-tools button{padding:7px 12px; font-size:14px}
+.sub-toggle{display:inline-flex; background:var(--panel2); border:1px solid var(--line); border-radius:9px; padding:3px}
+.sub-toggle .subm{background:transparent; color:var(--dim); padding:5px 12px; font-size:13px; border-radius:6px}
+.sub-toggle .subm.active{background:var(--blue); color:#fff}
 .sent-en{font-size:24px; line-height:1.5; margin:6px 0; font-weight:600}
 .sent-zh{font-size:16px; color:var(--dim); margin:4px 0 0}
 
