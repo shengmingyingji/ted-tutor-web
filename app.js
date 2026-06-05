@@ -95,6 +95,7 @@ function renderSegOptions(){
   });
 }
 function renderSentence(){
+  stopPlayback();   // 切句时停止上一句的播放，避免串音（下一句需重新点“听原声”）
   const s=TALK.sentences[cur];
   $("sentIndex").textContent="#"+(cur+1)+" / "+TALK.count;
   applySubtitle(s);
@@ -201,6 +202,12 @@ function recBtnUI(on){
 
 /* ---------- 听原声 / 变速 ---------- */
 function clearListenTimer(){ if(listenTimer){ clearTimeout(listenTimer); listenTimer=null; } }
+function stopPlayback(){
+  clearListenTimer();
+  if(ytPlayer && ytPlayer.pauseVideo){ try{ ytPlayer.pauseVideo(); }catch(e){} }
+  const v=$("video"); if(v){ try{ v.pause(); }catch(e){} }
+  if(window.speechSynthesis){ try{ speechSynthesis.cancel(); }catch(e){} }
+}
 function createYtPlayer(id){
   if(ytPlayer && ytPlayer.loadVideoById){ ytPlayer.loadVideoById(id); try{ ytPlayer.setPlaybackRate(speed); }catch(e){} return; }
   ytPlayer = new YT.Player("ytmount", {
@@ -239,12 +246,21 @@ function listenSentence(){
       setStatus("▶ 正在播放这一句的原声…"); return;
     }catch(e){}
   }
-  // 本地原片：播放/暂停原视频（拖动进度条可定位本句）
+  // 本地原片：跳到这一句的时间点播放原声，到下一句自停
   const v=$("video");
   if(LOCAL_SERVER && v.getAttribute("src")){
     try{ v.playbackRate=speed; }catch(e){}
-    if(v.paused){ v.play(); setStatus("▶ 播放原视频（拖动进度条可定位到本句）"); }
-    else { v.pause(); setStatus(""); }
+    if(s.t!=null){
+      try{ v.currentTime=s.t; }catch(e){}
+      v.play();
+      const next=TALK.sentences[cur+1];
+      const end=(next && next.t!=null) ? next.t : (s.t+6);
+      const dur=Math.max(0.8, end - s.t);
+      listenTimer=setTimeout(()=>{ try{ v.pause(); }catch(e){} setStatus(""); }, (dur/(speed||1))*1000 + 150);
+      setStatus("▶ 正在播放这一句的原声…");
+    }else{
+      if(v.paused){ v.play(); setStatus("▶ 播放原视频（拖动进度条可定位本句）"); } else { v.pause(); setStatus(""); }
+    }
     return;
   }
   // 回退：朗读本句（无逐句时间戳/在线无原片时）

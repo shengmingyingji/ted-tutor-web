@@ -1,12 +1,5 @@
 window.TALKS = [
     {
-        "id":  "talk01",
-        "order":  1,
-        "title":  "AI时代失去工作不可怕，可怕的是……",
-        "category":  "AI",
-        "count":  166
-    },
-    {
         "id":  "talk02",
         "order":  2,
         "title":  "如何使人类偏见远离人工智能？",
@@ -292,5 +285,12 @@ window.TALKS = [
         "title":  "一种更宽容，更温和的成功哲学",
         "category":  "哲学",
         "count":  188
+    },
+    {
+        "id":  "talk01",
+        "order":  1,
+        "title":  "AI时代失去工作不可怕，可怕的是……",
+        "category":  "AI",
+        "count":  166
     }
 ];
