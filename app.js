@@ -5,10 +5,20 @@ const $ = id => document.getElementById(id);
 const STOP = new Set("a an the of to in on at and or but is are was were be been am i you he she it we they this that for as with by from his her its our their my your".split(" "));
 // 是否跑在本地服务器(start.bat)上：决定能否放本地原片/抓YouTube字幕
 const LOCAL_SERVER = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+// 在线后端地址(部署 Cloudflare Worker 后由 window.TED_API_BASE 提供)；留空则线上版用手动字幕。
+let API_BASE = (typeof window!=="undefined" && window.TED_API_BASE) ? window.TED_API_BASE : "";
+function backendBase(){ return LOCAL_SERVER ? "" : API_BASE; }
+function hasBackend(){ return LOCAL_SERVER || !!API_BASE; }
 
 let TALK = null;       // 当前演讲数据
 let segStart = 0, segEnd = 0, cur = 0;
 let subMode = "bi";   // 字幕模式：bi=中英双字幕  en=仅英文
+let speed = 1;        // 播放速度
+let ytApiReady = false, ytPlayer = null, ytPendingId = null, listenTimer = null;
+window.onYouTubeIframeAPIReady = function(){
+  ytApiReady = true;
+  if(ytPendingId){ const id=ytPendingId; ytPendingId=null; createYtPlayer(id); }
+};
 let recognizing = false;
 let recog = null;
 let mode = "local";   // local=本地原片  online=在线YouTube
@@ -189,15 +199,62 @@ function recBtnUI(on){
   b.textContent= on? "■ 停止" : "🎤 开始跟读";
 }
 
-/* ---------- TTS 听原音 ---------- */
-function speak(){
-  if(!("speechSynthesis" in window)){ setStatus("浏览器不支持朗读功能。"); return; }
+/* ---------- 听原声 / 变速 ---------- */
+function clearListenTimer(){ if(listenTimer){ clearTimeout(listenTimer); listenTimer=null; } }
+function createYtPlayer(id){
+  if(ytPlayer && ytPlayer.loadVideoById){ ytPlayer.loadVideoById(id); try{ ytPlayer.setPlaybackRate(speed); }catch(e){} return; }
+  ytPlayer = new YT.Player("ytmount", {
+    videoId: id,
+    playerVars: { rel:0, modestbranding:1, playsinline:1 },
+    events: { onReady:(e)=>{ try{ e.target.setPlaybackRate(speed); }catch(_){} } }
+  });
+}
+function fallbackIframe(id){
+  const el=document.getElementById("ytmount"); if(!el) return;
+  if(el.tagName==="IFRAME"){ el.src="https://www.youtube.com/embed/"+id+"?rel=0&modestbranding=1"; return; }
+  el.innerHTML="";
+  const f=document.createElement("iframe"); f.className="ytframe";
+  f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen"); f.setAttribute("allowfullscreen","true");
+  f.src="https://www.youtube.com/embed/"+id+"?rel=0&modestbranding=1";
+  el.appendChild(f);
+}
+function speakTTS(text){
+  if(!("speechSynthesis" in window)){ setStatus("浏览器不支持朗读。"); return; }
   speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(TALK.sentences[cur].en);
-  u.lang="en-US"; u.rate=0.9;
-  const v=speechSynthesis.getVoices().find(v=>v.lang.startsWith("en"));
-  if(v) u.voice=v;
+  const u=new SpeechSynthesisUtterance(text); u.lang="en-US"; u.rate=Math.max(0.5,Math.min(1.5,speed));
+  const vo=speechSynthesis.getVoices().find(v=>v.lang.startsWith("en")); if(vo) u.voice=vo;
   speechSynthesis.speak(u);
+}
+function listenSentence(){
+  const s=TALK && TALK.sentences[cur]; if(!s) return;
+  clearListenTimer();
+  // YouTube：跳到这一句的时间点，播放该句原声（到下一句自停）
+  if(isYouTubeTalk() && ytPlayer && ytPlayer.seekTo && s.t!=null){
+    try{
+      ytPlayer.setPlaybackRate(speed);
+      ytPlayer.seekTo(s.t, true); ytPlayer.playVideo();
+      const next=TALK.sentences[cur+1];
+      const dur=(next && next.t!=null) ? Math.max(1.2, next.t - s.t) : 6;
+      listenTimer=setTimeout(()=>{ try{ ytPlayer.pauseVideo(); }catch(e){} }, (dur/(speed||1))*1000 + 250);
+      setStatus("▶ 正在播放这一句的原声…"); return;
+    }catch(e){}
+  }
+  // 本地原片：播放/暂停原视频（拖动进度条可定位本句）
+  const v=$("video");
+  if(LOCAL_SERVER && v.getAttribute("src")){
+    try{ v.playbackRate=speed; }catch(e){}
+    if(v.paused){ v.play(); setStatus("▶ 播放原视频（拖动进度条可定位到本句）"); }
+    else { v.pause(); setStatus(""); }
+    return;
+  }
+  // 回退：朗读本句（无逐句时间戳/在线无原片时）
+  speakTTS(s.en);
+  setStatus("（本篇无逐句原声，用朗读示范代替）");
+}
+function setSpeed(r){
+  speed=parseFloat(r)||1;
+  const v=$("video"); if(v){ try{ v.playbackRate=speed; }catch(e){} }
+  if(ytPlayer && ytPlayer.setPlaybackRate){ try{ ytPlayer.setPlaybackRate(speed); }catch(e){} }
 }
 
 /* ---------- 错词本抽屉 ---------- */
@@ -272,12 +329,12 @@ function applySubtitle(s){
   if(s.zh){ zhEl.textContent=s.zh; return; }
   const cached=trCacheGet(s.en);
   if(cached){ s.zh=cached; zhEl.textContent=cached; return; }
-  if(LOCAL_SERVER){ zhEl.textContent="（生成中文中…）"; translateSentence(s); }
+  if(hasBackend()){ zhEl.textContent="（生成中文中…）"; translateSentence(s); }
   else { zhEl.textContent="（在线版无法自动生成中文；本机版可，或用手动字幕的 || 提供）"; }
 }
 async function translateSentence(s){
   try{
-    const res=await fetch("/translate?q="+encodeURIComponent(s.en)+"&tl=zh-CN");
+    const res=await fetch(backendBase()+"/translate?q="+encodeURIComponent(s.en)+"&tl=zh-CN");
     const d=await res.json();
     if(d.ok && d.zh){ s.zh=d.zh; trCacheSet(s.en, d.zh); if(TALK && TALK.sentences[cur]===s && subMode!=="en"){ $("sentZh").textContent=d.zh; } }
     else if(TALK && TALK.sentences[cur]===s && subMode!=="en"){ $("sentZh").textContent="（翻译失败，可重试）"; }
@@ -292,28 +349,28 @@ function setSub(m){
 
 /* ---------- YouTube 在线学习 ---------- */
 function setMediaLocal(url){
-  const f=$("ytframe"); if(f){ f.src="about:blank"; f.style.display="none"; }
+  clearListenTimer();
+  if(ytPlayer && ytPlayer.pauseVideo){ try{ ytPlayer.pauseVideo(); }catch(e){} }
+  const el=document.getElementById("ytmount"); if(el){ el.classList.add("hidden"); }
   const v=$("video"); const tip=$("mediaTip");
   if(LOCAL_SERVER){
-    v.style.display=""; v.src=url;
-    if(tip){ tip.style.display=""; tip.textContent="▶️ 先整体看一遍视频/听原声，再逐句跟读。无字幕时间轴，按句练习即可。"; }
+    v.style.display=""; v.src=url; try{ v.playbackRate=speed; }catch(e){}
+    if(tip){ tip.style.display=""; tip.textContent="▶️ 整体看一遍后逐句跟读。点「听原声」播放原视频，拖动进度条可定位本句。"; }
   }else{
     v.style.display="none"; v.removeAttribute("src"); try{ v.load(); }catch(e){}
-    if(tip){ tip.style.display=""; tip.innerHTML="🌐 在线测试版不含原片（视频太大未上传），但可直接逐句跟读评分。想要带视频，请用右上角 <b>▶ YouTube</b>，或在电脑上用 start.bat 运行本地完整版。"; }
+    if(tip){ tip.style.display=""; tip.innerHTML="🌐 在线测试版不含原片（视频太大未上传），但可直接逐句跟读评分。想要带视频，请切到 <b>🌐 在线视频</b> 用 YouTube，或在电脑上用 start.bat 运行本地完整版。"; }
   }
 }
 function setMediaYouTube(id){
+  clearListenTimer();
   const v=$("video"); try{ v.pause(); }catch(e){} v.removeAttribute("src"); try{ v.load(); }catch(e){} v.style.display="none";
-  let f=$("ytframe");
-  if(!f){
-    f=document.createElement("iframe"); f.id="ytframe"; f.className="ytframe";
-    f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");
-    f.setAttribute("allowfullscreen","true");
-    $("mediaPane").insertBefore(f, $("mediaPane").firstChild);
-  }
-  f.style.display="block";
-  f.src="https://www.youtube.com/embed/"+id+"?rel=0&modestbranding=1";
   const tip=$("mediaTip"); if(tip) tip.style.display="none";
+  const el=document.getElementById("ytmount"); if(el){ el.classList.remove("hidden"); }
+  if(ytApiReady && window.YT && window.YT.Player){ createYtPlayer(id); }
+  else {
+    ytPendingId=id;
+    setTimeout(()=>{ if(ytPendingId===id && !(window.YT && window.YT.Player)){ fallbackIframe(id); ytPendingId=null; } }, 2500);
+  }
 }
 function parseYouTubeId(input){
   const s=String(input||"").trim();
@@ -323,7 +380,7 @@ function parseYouTubeId(input){
   return null;
 }
 function startYouTubeTalk(id, title, rawSentences){
-  const sentences=rawSentences.map((s,i)=>({i, en:(s.en||"").trim(), zh:(s.zh||"").trim()}))
+  const sentences=rawSentences.map((s,i)=>({i, en:(s.en||"").trim(), zh:(s.zh||"").trim(), t:(typeof s.t==="number"? s.t : null)}))
     .filter(s=>s.en && !/^(Translator|Reviewer|译者|审校)\s*[:：]/i.test(s.en) && !/^\[(Music|Applause|Laughter|音乐|掌声|笑声)\]?/i.test(s.en));
   if(!sentences.length){ ytStatus("没有可用的句子。"); return; }
   sentences.forEach((s,i)=>s.i=i);
@@ -335,13 +392,13 @@ async function ytLoad(){
   const id=parseYouTubeId($("ytUrl").value);
   if(!id){ ytStatus("链接无法识别，请粘贴 https://www.youtube.com/watch?v=... 或 https://youtu.be/..."); return; }
   setMediaYouTube(id);
-  if(!LOCAL_SERVER){
-    ytStatus("🌐 在线版无法自动抓字幕（没有本地服务）。视频已可播放——请用下方“手动粘贴字幕”开始练习。");
+  if(!hasBackend()){
+    ytStatus("🌐 在线版未配置后端，无法自动抓字幕。视频已可播放——请点「手动字幕」粘贴英文开始练习。");
     return;
   }
   ytStatus("视频已载入。正在抓取英文字幕和中文翻译…（首次可能要几秒）");
   try{
-    const res=await fetch("/yt/captions?v="+encodeURIComponent(id));
+    const res=await fetch(backendBase()+"/yt/captions?v="+encodeURIComponent(id));
     const data=await res.json();
     if(data.ok && data.sentences && data.sentences.length){
       startYouTubeTalk(id, data.title||("YouTube "+id), data.sentences);
@@ -387,7 +444,9 @@ function setMode(m){
     }
   }else{ // online
     if(!isYouTubeTalk()){
-      const f=$("ytframe"); if(f){ f.style.display="none"; }
+      clearListenTimer();
+      if(ytPlayer && ytPlayer.pauseVideo){ try{ ytPlayer.pauseVideo(); }catch(e){} }
+      const el=document.getElementById("ytmount"); if(el){ el.classList.add("hidden"); }
       $("video").style.display="none"; $("video").removeAttribute("src");
       const tip=$("mediaTip");
       if(tip){ tip.style.display=""; tip.innerHTML="🌐 粘贴 YouTube 链接 → 点「载入」即可站内播放并跟读。" + (LOCAL_SERVER ? "本机会自动抓取英文字幕。" : "在线版请用「手动字幕」粘贴英文字幕。"); }
@@ -409,7 +468,8 @@ function init(){
   $("segSelect").onchange=onSegChange;
   $("prevBtn").onclick=()=>{ if(cur>segStart){cur--;renderSentence();} };
   $("nextBtn").onclick=()=>{ if(cur<segEnd){cur++;renderSentence();} };
-  $("ttsBtn").onclick=speak;
+  $("listenBtn").onclick=listenSentence;
+  $("speedSel").onchange=(e)=>setSpeed(e.target.value);
   subMode = (localStorage.getItem("ted_submode")||"bi");
   $("subBi").classList.toggle("active", subMode==="bi");
   $("subEn").classList.toggle("active", subMode==="en");

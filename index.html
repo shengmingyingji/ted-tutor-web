@@ -34,6 +34,7 @@
 <main>
   <section id="mediaPane">
     <video id="video" controls preload="metadata"></video>
+    <div id="ytmount" class="ytframe hidden"></div>
     <div class="media-tip" id="mediaTip">▶️ 先整体看一遍视频/听原声，再逐句跟读。无字幕时间轴，按句练习即可。</div>
   </section>
 
@@ -45,7 +46,14 @@
       <div class="card-top">
         <span class="sent-index" id="sentIndex">#1</span>
         <div class="card-tools">
-          <button id="ttsBtn" title="听标准发音">🔊 听原音</button>
+          <button id="listenBtn" title="听这一句的原声">▶ 听原声</button>
+          <select id="speedSel" class="speed" title="播放速度">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="1" selected>1x</option>
+            <option value="1.25">1.25x</option>
+            <option value="1.5">1.5x</option>
+          </select>
           <span class="sub-toggle" title="字幕：中英双字幕 / 仅英文">
             <button id="subBi" class="subm active">中英</button>
             <button id="subEn" class="subm">英</button>
@@ -102,6 +110,7 @@
 
 <div id="mask" class="mask hidden"></div>
 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script src="data/talks.js"></script>
 <script src="app.js"></script>
 </body>
