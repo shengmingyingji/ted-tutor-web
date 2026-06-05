@@ -1,0 +1,296 @@
+window.TALKS = [
+    {
+        "id":  "talk01",
+        "order":  1,
+        "title":  "AI时代失去工作不可怕，可怕的是……",
+        "category":  "AI",
+        "count":  166
+    },
+    {
+        "id":  "talk02",
+        "order":  2,
+        "title":  "如何使人类偏见远离人工智能？",
+        "category":  "AI",
+        "count":  141
+    },
+    {
+        "id":  "talk03",
+        "order":  3,
+        "title":  "人类和AI如何共同创造更好的业务",
+        "category":  "AI",
+        "count":  170
+    },
+    {
+        "id":  "talk04",
+        "order":  4,
+        "title":  "直觉性AI不可思议的发明",
+        "category":  "AI",
+        "count":  150
+    },
+    {
+        "id":  "talk05",
+        "order":  5,
+        "title":  "机器人可以通过大学入学考试吗？",
+        "category":  "AI",
+        "count":  122
+    },
+    {
+        "id":  "talk06",
+        "order":  6,
+        "title":  "面对机器人，我们将要失去以及不会失去的工作",
+        "category":  "AI",
+        "count":  57
+    },
+    {
+        "id":  "talk07",
+        "order":  7,
+        "title":  "AI如何提高我们的记忆力、工作和社交生活？",
+        "category":  "AI",
+        "count":  87
+    },
+    {
+        "id":  "talk08",
+        "order":  8,
+        "title":  "我们可以建造AI，而不会失去对它的控制吗？",
+        "category":  "AI",
+        "count":  141
+    },
+    {
+        "id":  "talk09",
+        "order":  9,
+        "title":  "利用卫星和人工智能跟踪全球碳排放量",
+        "category":  "AI",
+        "count":  223
+    },
+    {
+        "id":  "talk10",
+        "order":  10,
+        "title":  "我们如何让人工智能来帮助——而不是伤害人类？",
+        "category":  "AI",
+        "count":  120
+    },
+    {
+        "id":  "talk11",
+        "order":  11,
+        "title":  "与其害怕人工智能，不如跟它合作",
+        "category":  "AI",
+        "count":  141
+    },
+    {
+        "id":  "talk12",
+        "order":  12,
+        "title":  "人工智能如何为你的生活创作个性化的配乐？",
+        "category":  "AI",
+        "count":  59
+    },
+    {
+        "id":  "talk13",
+        "order":  13,
+        "title":  "我们都是半机器人",
+        "category":  "AI",
+        "count":  119
+    },
+    {
+        "id":  "talk14",
+        "order":  14,
+        "title":  "AI生成的生物帮助我们拓宽想象的边界",
+        "category":  "AI",
+        "count":  122
+    },
+    {
+        "id":  "talk15",
+        "order":  15,
+        "title":  "人工智能是否可以真正理解人类？",
+        "category":  "AI",
+        "count":  264
+    },
+    {
+        "id":  "talk16",
+        "order":  16,
+        "title":  "消失的计算机和你能随身携带 AI 的世界",
+        "category":  "AI",
+        "count":  146
+    },
+    {
+        "id":  "talk17",
+        "order":  17,
+        "title":  "劣质数据如何让我们远离优质AI？",
+        "category":  "AI",
+        "count":  132
+    },
+    {
+        "id":  "talk18",
+        "order":  18,
+        "title":  "超级智能 AI 会终结世界吗？",
+        "category":  "AI",
+        "count":  116
+    },
+    {
+        "id":  "talk19",
+        "order":  19,
+        "title":  "如何让 AI 处于掌控之中",
+        "category":  "AI",
+        "count":  147
+    },
+    {
+        "id":  "talk20",
+        "order":  20,
+        "title":  "AI 如何粉碎通往平等之路上的阻碍",
+        "category":  "AI",
+        "count":  87
+    },
+    {
+        "id":  "talk21",
+        "order":  21,
+        "title":  "乐观主义者对人工智能时代的看法",
+        "category":  "AI",
+        "count":  119
+    },
+    {
+        "id":  "talk22",
+        "order":  22,
+        "title":  "你能解开篮球机器人谜题吗?",
+        "category":  "AI",
+        "count":  77
+    },
+    {
+        "id":  "talk23",
+        "order":  23,
+        "title":  "塔罗斯，第一个机器人的希腊神话",
+        "category":  "AI",
+        "count":  49
+    },
+    {
+        "id":  "talk24",
+        "order":  24,
+        "title":  "在死亡面前，生活如何有意义？",
+        "category":  "哲学",
+        "count":  221
+    },
+    {
+        "id":  "talk25",
+        "order":  25,
+        "title":  "时间真的存在吗？",
+        "category":  "哲学",
+        "count":  59
+    },
+    {
+        "id":  "talk26",
+        "order":  26,
+        "title":  "为什么有这么多昆虫存在",
+        "category":  "哲学",
+        "count":  68
+    },
+    {
+        "id":  "talk27",
+        "order":  27,
+        "title":  "对死亡最真诚的答案",
+        "category":  "哲学",
+        "count":  81
+    },
+    {
+        "id":  "talk28",
+        "order":  28,
+        "title":  "乒乓球的生活哲学：别太在意比分，你就赢了！",
+        "category":  "哲学",
+        "count":  75
+    },
+    {
+        "id":  "talk29",
+        "order":  29,
+        "title":  "道德如何帮助我们做出更好的决定",
+        "category":  "哲学",
+        "count":  130
+    },
+    {
+        "id":  "talk30",
+        "order":  30,
+        "title":  "火星上可以有人类存在吗？",
+        "category":  "哲学",
+        "count":  69
+    },
+    {
+        "id":  "talk31",
+        "order":  31,
+        "title":  "道德难题：你可以说谎吗？",
+        "category":  "哲学",
+        "count":  61
+    },
+    {
+        "id":  "talk32",
+        "order":  32,
+        "title":  "为全球气候正义而制定的新型社会契约",
+        "category":  "哲学",
+        "count":  192
+    },
+    {
+        "id":  "talk33",
+        "order":  33,
+        "title":  "可能存在生命的三个卫星和一个行星",
+        "category":  "哲学",
+        "count":  138
+    },
+    {
+        "id":  "talk34",
+        "order":  34,
+        "title":  "我为何相信人文主义而非信仰？",
+        "category":  "哲学",
+        "count":  179
+    },
+    {
+        "id":  "talk35",
+        "order":  35,
+        "title":  "为什么我们总能看到不存在的东西？",
+        "category":  "哲学",
+        "count":  57
+    },
+    {
+        "id":  "talk36",
+        "order":  36,
+        "title":  "如何构建一个没有人因等待移植而死亡的世界？",
+        "category":  "哲学",
+        "count":  122
+    },
+    {
+        "id":  "talk37",
+        "order":  37,
+        "title":  "宇宙的死亡——以及它对生命的意义",
+        "category":  "哲学",
+        "count":  91
+    },
+    {
+        "id":  "talk38",
+        "order":  38,
+        "title":  "为正义而战——即使我们有生之年无法亲眼见证",
+        "category":  "哲学",
+        "count":  98
+    },
+    {
+        "id":  "talk39",
+        "order":  39,
+        "title":  "什么时候愤怒是合理的？哲学探究",
+        "category":  "哲学",
+        "count":  106
+    },
+    {
+        "id":  "talk40",
+        "order":  40,
+        "title":  "心灵遥感是否存在",
+        "category":  "哲学",
+        "count":  39
+    },
+    {
+        "id":  "talk41",
+        "order":  41,
+        "title":  "一位从未存在过的伟大数学家",
+        "category":  "哲学",
+        "count":  63
+    },
+    {
+        "id":  "talk42",
+        "order":  42,
+        "title":  "一种更宽容，更温和的成功哲学",
+        "category":  "哲学",
+        "count":  188
+    }
+];

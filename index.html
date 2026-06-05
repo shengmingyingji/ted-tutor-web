@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TED陪练 · 跟读发音评分</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">🎤 TED陪练</div>
+  <div class="selectors">
+    <select id="talkSelect" title="选择演讲"></select>
+    <select id="segSelect" title="选择段落"></select>
+  </div>
+  <div class="header-actions">
+    <button id="ytBtn" class="ghost">▶ YouTube</button>
+    <button id="errBtn" class="ghost">错词本 <span id="errCount" class="badge">0</span></button>
+  </div>
+</header>
+
+<main>
+  <section id="mediaPane">
+    <video id="video" controls preload="metadata"></video>
+    <div class="media-tip" id="mediaTip">▶️ 先整体看一遍视频/听原声，再逐句跟读。无字幕时间轴，按句练习即可。</div>
+  </section>
+
+  <section id="practicePane">
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <div class="progress-text"><span id="segName">—</span> · 本段进度 <span id="segProgress">0/0</span></div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="sent-index" id="sentIndex">#1</span>
+        <div class="card-tools">
+          <button id="ttsBtn" title="听标准发音">🔊 听原音</button>
+          <button id="zhToggle" class="ghost" title="显示/隐藏中文">中文</button>
+        </div>
+      </div>
+      <p class="sent-en" id="sentEn">加载中…</p>
+      <p class="sent-zh hidden" id="sentZh"></p>
+
+      <div id="result" class="result hidden">
+        <div class="score-row">
+          <div class="score-main"><span id="scoreNum">0</span><small>分</small></div>
+          <div class="score-sub">
+            <div>准确度 <b id="accuracy">0%</b></div>
+            <div>完整度 <b id="completeness">0%</b></div>
+          </div>
+        </div>
+        <div class="diff-label">你的发音对照（<span class="ok-chip">绿=读对</span> <span class="miss-chip">红=漏读/不准</span>）：</div>
+        <p class="diff" id="diff"></p>
+        <div class="heard">识别到：<span id="heard">—</span></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn" class="nav">← 上一句</button>
+      <button id="recBtn" class="rec">🎤 开始跟读</button>
+      <button id="nextBtn" class="nav">下一句 →</button>
+    </div>
+    <div id="status" class="status"></div>
+  </section>
+</main>
+
+<!-- 错词本抽屉 -->
+<div id="errPanel" class="drawer hidden">
+  <div class="drawer-head">
+    <b>错词本</b>
+    <div>
+      <button id="exportBtn" class="ghost">导出（Anki/复盘）</button>
+      <button id="closeErr" class="ghost">关闭</button>
+    </div>
+  </div>
+  <div id="errList" class="err-list"></div>
+</div>
+<!-- YouTube 抽屉 -->
+<div id="ytPanel" class="drawer hidden">
+  <div class="drawer-head">
+    <b>▶ YouTube 在线学习</b>
+    <button id="closeYt" class="ghost">关闭</button>
+  </div>
+  <p class="yt-desc">粘贴 YouTube 链接 → 站内播放 + 自动抓取英文字幕和中文翻译 → 按句跟读评分。<br><span class="dim">需要本机能访问 YouTube；抓不到时用下方手动粘贴字幕。</span></p>
+  <input id="ytUrl" class="yt-input" placeholder="https://www.youtube.com/watch?v=... 或 https://youtu.be/...">
+  <button id="ytLoadBtn" class="yt-load">载入并自动获取字幕</button>
+  <div id="ytStatus" class="yt-status"></div>
+  <details class="yt-manual">
+    <summary>抓不到字幕？点这里手动粘贴英文字幕</summary>
+    <textarea id="ytManualText" class="yt-textarea" placeholder="把英文字幕贴进来，每行一句（也可整段，会自动按句号拆分）。如果有中文，用 || 分隔，例如：&#10;Hello everyone||大家好&#10;Today we talk about AI||今天我们聊聊人工智能"></textarea>
+    <button id="ytManualBtn" class="ghost">用粘贴的字幕开始</button>
+  </details>
+</div>
+
+<div id="mask" class="mask hidden"></div>
+
+<script src="data/talks.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
