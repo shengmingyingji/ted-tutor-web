@@ -21,6 +21,17 @@ select{
   border-radius:8px; padding:8px 10px; font-size:14px; max-width:340px;
 }
 .header-actions{margin-left:auto}
+
+/* 模式切换条 */
+.modebar{display:flex; gap:6px; background:var(--panel2); border:1px solid var(--line); border-radius:12px; padding:4px}
+.modebar .mode{background:transparent; color:var(--dim); padding:8px 16px; border-radius:9px; font-size:14px}
+.modebar .mode.active{background:var(--blue); color:#fff}
+
+/* 模式工具栏 */
+.toolbar{display:flex; gap:10px; align-items:center; padding:12px 20px 0; flex-wrap:wrap}
+.toolbar .ctl{display:flex; gap:8px; flex:1; min-width:260px}
+.yt-inline{flex:1; min-width:200px; background:var(--panel2); color:var(--text); border:1px solid var(--line); border-radius:8px; padding:9px 11px; font-size:14px}
+.yt-inline-btn{padding:9px 18px; font-size:14px}
 button{
   cursor:pointer; border:none; border-radius:10px; padding:10px 16px;
   font-size:15px; font-family:inherit; background:var(--blue); color:#fff;

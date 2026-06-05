@@ -11,6 +11,7 @@ let segStart = 0, segEnd = 0, cur = 0;
 let zhVisible = false;
 let recognizing = false;
 let recog = null;
+let mode = "local";   // local=本地原片  online=在线YouTube
 
 /* ---------- 工具 ---------- */
 function setStatus(t){ $("status").textContent = t || ""; }
@@ -342,6 +343,32 @@ function ytStatus(t){ $("ytStatus").textContent=t||""; }
 function openYt(){ $("ytPanel").classList.remove("hidden"); $("mask").classList.remove("hidden"); }
 function closeYt(){ $("ytPanel").classList.add("hidden"); $("mask").classList.add("hidden"); }
 
+/* ---------- 本地原片 / 在线视频 模式切换 ---------- */
+function isYouTubeTalk(){ return TALK && String(TALK.id).indexOf("yt_")===0; }
+function setMode(m){
+  mode=m;
+  $("modeLocal").classList.toggle("active", m==="local");
+  $("modeOnline").classList.toggle("active", m==="online");
+  $("localCtl").classList.toggle("hidden", m!=="local");
+  $("onlineCtl").classList.toggle("hidden", m!=="online");
+  if(m==="local"){
+    ytStatus("");
+    if(!TALK || isYouTubeTalk()){
+      if((window.TALKS||[]).length) onTalkChange();      // 回到本地演讲
+    }else{
+      setMediaLocal(mediaUrl(TALK.folder, TALK.video));   // 已是本地演讲，恢复原片
+    }
+  }else{ // online
+    if(!isYouTubeTalk()){
+      const f=$("ytframe"); if(f){ f.style.display="none"; }
+      $("video").style.display="none"; $("video").removeAttribute("src");
+      const tip=$("mediaTip");
+      if(tip){ tip.style.display=""; tip.innerHTML="🌐 粘贴 YouTube 链接 → 点「载入」即可站内播放并跟读。" + (LOCAL_SERVER ? "本机会自动抓取英文字幕。" : "在线版请用「手动字幕」粘贴英文字幕。"); }
+      ytStatus(LOCAL_SERVER ? "" : "提示：在线测试版无法自动抓字幕，载入视频后点「手动字幕」粘贴英文即可。");
+    }
+  }
+}
+
 /* ---------- 启动 ---------- */
 function init(){
   if(location.protocol==="file:")
@@ -361,7 +388,9 @@ function init(){
   $("closeErr").onclick=closeErr;
   $("mask").onclick=()=>{ closeErr(); closeYt(); };
   $("exportBtn").onclick=exportErr;
-  $("ytBtn").onclick=openYt;
+  $("modeLocal").onclick=()=>setMode("local");
+  $("modeOnline").onclick=()=>setMode("online");
+  $("ytManualOpen").onclick=openYt;
   $("closeYt").onclick=closeYt;
   $("ytLoadBtn").onclick=ytLoad;
   $("ytManualBtn").onclick=ytManual;

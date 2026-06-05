@@ -9,15 +9,27 @@
 <body>
 <header>
   <div class="brand">🎤 TED陪练</div>
-  <div class="selectors">
-    <select id="talkSelect" title="选择演讲"></select>
-    <select id="segSelect" title="选择段落"></select>
+  <div class="modebar">
+    <button id="modeLocal" class="mode active">📁 本地原片</button>
+    <button id="modeOnline" class="mode">🌐 在线视频</button>
   </div>
   <div class="header-actions">
-    <button id="ytBtn" class="ghost">▶ YouTube</button>
     <button id="errBtn" class="ghost">错词本 <span id="errCount" class="badge">0</span></button>
   </div>
 </header>
+
+<div class="toolbar">
+  <div id="localCtl" class="ctl">
+    <select id="talkSelect" title="选择演讲"></select>
+  </div>
+  <div id="onlineCtl" class="ctl hidden">
+    <input id="ytUrl" class="yt-inline" placeholder="粘贴 YouTube 链接：watch?v=… 或 youtu.be/…">
+    <button id="ytLoadBtn" class="yt-inline-btn">载入</button>
+    <button id="ytManualOpen" class="ghost">手动字幕</button>
+  </div>
+  <select id="segSelect" title="选择段落"></select>
+</div>
+<div id="ytStatus" class="yt-status"></div>
 
 <main>
   <section id="mediaPane">
@@ -74,21 +86,15 @@
   </div>
   <div id="errList" class="err-list"></div>
 </div>
-<!-- YouTube 抽屉 -->
+<!-- 手动粘贴字幕抽屉 -->
 <div id="ytPanel" class="drawer hidden">
   <div class="drawer-head">
-    <b>▶ YouTube 在线学习</b>
+    <b>手动粘贴字幕</b>
     <button id="closeYt" class="ghost">关闭</button>
   </div>
-  <p class="yt-desc">粘贴 YouTube 链接 → 站内播放 + 自动抓取英文字幕和中文翻译 → 按句跟读评分。<br><span class="dim">需要本机能访问 YouTube；抓不到时用下方手动粘贴字幕。</span></p>
-  <input id="ytUrl" class="yt-input" placeholder="https://www.youtube.com/watch?v=... 或 https://youtu.be/...">
-  <button id="ytLoadBtn" class="yt-load">载入并自动获取字幕</button>
-  <div id="ytStatus" class="yt-status"></div>
-  <details class="yt-manual">
-    <summary>抓不到字幕？点这里手动粘贴英文字幕</summary>
-    <textarea id="ytManualText" class="yt-textarea" placeholder="把英文字幕贴进来，每行一句（也可整段，会自动按句号拆分）。如果有中文，用 || 分隔，例如：&#10;Hello everyone||大家好&#10;Today we talk about AI||今天我们聊聊人工智能"></textarea>
-    <button id="ytManualBtn" class="ghost">用粘贴的字幕开始</button>
-  </details>
+  <p class="yt-desc">在线版、或自动抓不到字幕时用：先在上方「在线视频」里载入 YouTube 链接播放，再把英文字幕贴到下面开始跟读。<br><span class="dim">每行一句；有中文用 <b>||</b> 分隔，如 <code>Hello||你好</code>。</span></p>
+  <textarea id="ytManualText" class="yt-textarea" placeholder="Hello everyone||大家好&#10;Today we talk about AI||今天我们聊聊人工智能&#10;Let us begin||让我们开始"></textarea>
+  <button id="ytManualBtn" class="yt-load">用粘贴的字幕开始</button>
 </div>
 
 <div id="mask" class="mask hidden"></div>
