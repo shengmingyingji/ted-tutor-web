@@ -129,1107 +129,1328 @@ window.TALK_DATA = {
                       {
                           "i":  0,
                           "en":  "A few days after my husband Paul was diagnosed with stage 4 lung cancer.",
-                          "zh":  "几天后，我丈夫保罗被诊断出患有第四期肺癌。"
+                          "zh":  "几天后，我丈夫保罗被诊断出患有第四期肺癌。",
+                          "t":  12.02
                       },
                       {
                           "i":  1,
                           "en":  "We were lying in our bed at home and Paul said, it\u0027s going to be okay.",
-                          "zh":  "我们躺在家里的床上，保罗说，一切都会好起来的。"
+                          "zh":  "我们躺在家里的床上，保罗说，一切都会好起来的。",
+                          "t":  19.32
                       },
                       {
                           "i":  2,
                           "en":  "And I remember answering back, yes, we just don\u0027t know what okay means yet.",
-                          "zh":  "我记得我回答说，是的，我们只是还不知道“好”意味着什么。"
+                          "zh":  "我记得我回答说，是的，我们只是还不知道“好”意味着什么。",
+                          "t":  25.5
                       },
                       {
                           "i":  3,
                           "en":  "Paul and I had met as first-year medical students at Yale.",
-                          "zh":  "保罗和我是耶鲁大学医学院一年级学生时认识的。"
+                          "zh":  "保罗和我是耶鲁大学医学院一年级学生时认识的。",
+                          "t":  35.1
                       },
                       {
                           "i":  4,
                           "en":  "He was smart and kind and super funny.",
-                          "zh":  "他很聪明，很友善，而且超级有趣。"
+                          "zh":  "他很聪明，很友善，而且超级有趣。",
+                          "t":  38.78
                       },
                       {
                           "i":  5,
                           "en":  "He used to keep a gorilla suit in the trunk of his car, and he\u0027d say, it\u0027s for emergencies only.",
-                          "zh":  "他过去常常在汽车后备箱里放一件大猩猩服，他会说，这只是为了紧急情况。"
+                          "zh":  "他过去常常在汽车后备箱里放一件大猩猩服，他会说，这只是为了紧急情况。",
+                          "t":  42.72
                       },
                       {
                           "i":  6,
                           "en":  "I fell in love with Paul as I watched the care he took with his patients.",
-                          "zh":  "当我看到保罗对病人的照顾时，我爱上了他。"
+                          "zh":  "当我看到保罗对病人的照顾时，我爱上了他。",
+                          "t":  50.88
                       },
                       {
                           "i":  7,
                           "en":  "He stayed late talking with them, seeking to understand the experience of illness and",
-                          "zh":  "他与他们交谈至深夜，试图了解他们患病的经历以及"
+                          "zh":  "他与他们交谈至深夜，试图了解他们患病的经历以及",
+                          "t":  54.42
                       },
                       {
                           "i":  8,
                           "en":  "not just its technicalities.",
-                          "zh":  "不仅仅是它的技术细节。"
+                          "zh":  "不仅仅是它的技术细节。",
+                          "t":  61.26
                       },
                       {
                           "i":  9,
                           "en":  "He later told me he fell in love with me when he saw me cry over an EKG of a heart that had ceased beating.",
-                          "zh":  "后来他告诉我，当他看到我为停止跳动的心电图哭泣时，他爱上了我。"
+                          "zh":  "后来他告诉我，当他看到我为停止跳动的心电图哭泣时，他爱上了我。",
+                          "t":  64.2
                       },
                       {
                           "i":  10,
                           "en":  "We didn\u0027t know it yet, but even in the heady days of young love, we were learning how to approach suffering together.",
-                          "zh":  "我们当时还不知道，但即使在年轻爱情的令人陶醉的日子里，我们也在学习如何一起面对痛苦。"
+                          "zh":  "我们当时还不知道，但即使在年轻爱情的令人陶醉的日子里，我们也在学习如何一起面对痛苦。",
+                          "t":  72.66
                       },
                       {
                           "i":  11,
                           "en":  "We got married and became doctors.",
-                          "zh":  "我们结婚并成为医生。"
+                          "zh":  "我们结婚并成为医生。",
+                          "t":  82.3
                       },
                       {
                           "i":  12,
                           "en":  "I was working as an internist and Paul was finishing his training as a neurosurgeon when he started to lose weight.",
-                          "zh":  "当我开始减肥时，我是一名内科医生，保罗正在完成神经外科医生的培训。"
+                          "zh":  "当我开始减肥时，我是一名内科医生，保罗正在完成神经外科医生的培训。",
+                          "t":  85.24
                       },
                       {
                           "i":  13,
                           "en":  "He developed excruciating back pain and a cough that wouldn\u0027t go away.",
-                          "zh":  "他出现了难以忍受的背痛和持续不断的咳嗽。"
+                          "zh":  "他出现了难以忍受的背痛和持续不断的咳嗽。",
+                          "t":  94.02
                       },
                       {
                           "i":  14,
                           "en":  "And when he was admitted to the hospital, a CT scan revealed tumors in Paul\u0027s lungs and in his bones.",
-                          "zh":  "当他入院时，CT 扫描显示保罗的肺部和骨骼中存在肿瘤。"
+                          "zh":  "当他入院时，CT 扫描显示保罗的肺部和骨骼中存在肿瘤。",
+                          "t":  100.34
                       },
                       {
                           "i":  15,
                           "en":  "We had both cared for patients with devastating diagnoses.",
-                          "zh":  "我们都曾照顾过患有毁灭性诊断的患者。"
+                          "zh":  "我们都曾照顾过患有毁灭性诊断的患者。",
+                          "t":  108.22
                       },
                       {
                           "i":  16,
                           "en":  "Now, it was our turn.",
-                          "zh":  "现在，轮到我们了。"
+                          "zh":  "现在，轮到我们了。",
+                          "t":  113.18
                       },
                       {
                           "i":  17,
                           "en":  "We lived with Paul\u0027s illness for 22 months.",
-                          "zh":  "我们带着保罗的病生活了 22 个月。"
+                          "zh":  "我们带着保罗的病生活了 22 个月。",
+                          "t":  118.24
                       },
                       {
                           "i":  18,
                           "en":  "He wrote a memoir about facing mortality.",
-                          "zh":  "他写了一本关于面对死亡的回忆录。"
+                          "zh":  "他写了一本关于面对死亡的回忆录。",
+                          "t":  121.88
                       },
                       {
                           "i":  19,
                           "en":  "I gave birth to our daughter, Katie, and we loved her and each other.",
-                          "zh":  "我生下了我们的女儿凯蒂，我们爱她，也爱彼此。"
+                          "zh":  "我生下了我们的女儿凯蒂，我们爱她，也爱彼此。",
+                          "t":  125.28
                       },
                       {
                           "i":  20,
                           "en":  "We learned directly how to struggle through really tough medical decisions.",
-                          "zh":  "我们直接学会了如何在非常艰难的医疗决定中挣扎。"
+                          "zh":  "我们直接学会了如何在非常艰难的医疗决定中挣扎。",
+                          "t":  130.24
                       },
                       {
                           "i":  21,
                           "en":  "The day we took Paul into the hospital for the last time was the most difficult day of my life.",
-                          "zh":  "我们最后一次带保罗去医院的那天是我一生中最艰难的一天。"
+                          "zh":  "我们最后一次带保罗去医院的那天是我一生中最艰难的一天。",
+                          "t":  136.82
                       },
                       {
                           "i":  22,
                           "en":  "When he turned to me at the end and said, I\u0027m ready.",
-                          "zh":  "当他最后转向我说，我准备好了。"
+                          "zh":  "当他最后转向我说，我准备好了。",
+                          "t":  144.24
                       },
                       {
                           "i":  23,
                           "en":  "I knew that wasn\u0027t just a brave decision.",
-                          "zh":  "我知道这不仅仅是一个勇敢的决定。"
+                          "zh":  "我知道这不仅仅是一个勇敢的决定。",
+                          "t":  150.86
                       },
                       {
                           "i":  24,
                           "en":  "It was the right one.",
-                          "zh":  "这是正确的。"
+                          "zh":  "这是正确的。",
+                          "t":  153.2
                       },
                       {
                           "i":  25,
                           "en":  "Paul didn\u0027t want a ventilator and CPR.",
-                          "zh":  "保罗不需要呼吸机和心肺复苏术。"
+                          "zh":  "保罗不需要呼吸机和心肺复苏术。",
+                          "t":  156.58
                       },
                       {
                           "i":  26,
                           "en":  "In that moment, the most important thing to Paul was to hold our baby daughter.",
-                          "zh":  "在那一刻，对保罗来说最重要的事情就是抱住我们的小女儿。"
+                          "zh":  "在那一刻，对保罗来说最重要的事情就是抱住我们的小女儿。",
+                          "t":  160.24
                       },
                       {
                           "i":  27,
                           "en":  "Nine hours later, Paul died.",
-                          "zh":  "九小时后，保罗去世了。"
+                          "zh":  "九小时后，保罗去世了。",
+                          "t":  169.14
                       },
                       {
                           "i":  28,
                           "en":  "I\u0027ve always thought of myself as a caregiver.",
-                          "zh":  "我一直认为自己是一个照顾者。"
+                          "zh":  "我一直认为自己是一个照顾者。",
+                          "t":  175.8
                       },
                       {
                           "i":  29,
                           "en":  "Most physicians do.",
-                          "zh":  "大多数医生都会这样做。"
+                          "zh":  "大多数医生都会这样做。",
+                          "t":  177.9
                       },
                       {
                           "i":  30,
                           "en":  "And taking care of Paul deepened what that meant.",
-                          "zh":  "照顾保罗加深了这句话的意义。"
+                          "zh":  "照顾保罗加深了这句话的意义。",
+                          "t":  180.06
                       },
                       {
                           "i":  31,
                           "en":  "Watching him reshape his identity during his illness,",
-                          "zh":  "看着他在生病期间重塑自己的身份，"
+                          "zh":  "看着他在生病期间重塑自己的身份，",
+                          "t":  183.4
                       },
                       {
                           "i":  32,
                           "en":  "learning to witness and accept his pain, talking together through his choices.",
-                          "zh":  "学会见证并接受他的痛苦，通过他的选择一起交谈。"
+                          "zh":  "学会见证并接受他的痛苦，通过他的选择一起交谈。",
+                          "t":  187.32
                       },
                       {
                           "i":  33,
                           "en":  "Those experiences taught me that resilience does not mean bouncing back",
-                          "zh":  "这些经历告诉我，韧性并不意味着反弹"
+                          "zh":  "这些经历告诉我，韧性并不意味着反弹",
+                          "t":  193.82
                       },
                       {
                           "i":  34,
                           "en":  "to where you were before or pretending that the hard stuff isn\u0027t hard.",
-                          "zh":  "回到你之前的状态，或者假装困难的事情并不困难。"
+                          "zh":  "回到你之前的状态，或者假装困难的事情并不困难。",
+                          "t":  198.08
                       },
                       {
                           "i":  35,
                           "en":  "It is so hard.",
-                          "zh":  "太难了。"
+                          "zh":  "太难了。",
+                          "t":  203.68
                       },
                       {
                           "i":  36,
                           "en":  "It\u0027s painful, messy stuff, but it\u0027s the stuff.",
-                          "zh":  "这是痛苦的、混乱的事情，但就是这样。"
+                          "zh":  "这是痛苦的、混乱的事情，但就是这样。",
+                          "t":  206.98
                       },
                       {
                           "i":  37,
                           "en":  "And I learned that when we approach it together,",
-                          "zh":  "我了解到，当我们一起解决这个问题时，"
+                          "zh":  "我了解到，当我们一起解决这个问题时，",
+                          "t":  212.88
                       },
                       {
                           "i":  38,
                           "en":  "we get to decide what success looks like.",
-                          "zh":  "我们必须决定成功是什么样子。"
+                          "zh":  "我们必须决定成功是什么样子。",
+                          "t":  216.18
                       },
                       {
                           "i":  39,
                           "en":  "One of the first things Paul said to me after his diagnosis was,",
-                          "zh":  "保罗确诊后对我说的第一句话是，"
+                          "zh":  "保罗确诊后对我说的第一句话是，",
+                          "t":  222.76
                       },
                       {
                           "i":  40,
                           "en":  "I want you to get me married.",
-                          "zh":  "我要你给我结婚。"
+                          "zh":  "我要你给我结婚。",
+                          "t":  226.74
                       },
                       {
                           "i":  41,
                           "en":  "And I was like, whoa, I guess we get to say anything out loud.",
-                          "zh":  "我当时想，哇，我想我们可以大声说任何话。"
+                          "zh":  "我当时想，哇，我想我们可以大声说任何话。",
+                          "t":  230.14
                       },
                       {
                           "i":  42,
                           "en":  "It was so shocking and heartbreaking and generous and really comforting",
-                          "zh":  "这是如此令人震惊、心碎、慷慨、令人欣慰"
+                          "zh":  "这是如此令人震惊、心碎、慷慨、令人欣慰",
+                          "t":  235.02
                       },
                       {
                           "i":  43,
                           "en":  "because it was so starkly honest.",
-                          "zh":  "因为它是如此的诚实。"
+                          "zh":  "因为它是如此的诚实。",
+                          "t":  243.82
                       },
                       {
                           "i":  44,
                           "en":  "And that honesty turned out to be exactly what we needed.",
-                          "zh":  "事实证明，这种诚实正是我们所需要的。"
+                          "zh":  "事实证明，这种诚实正是我们所需要的。",
+                          "t":  246.04
                       },
                       {
                           "i":  45,
                           "en":  "Early in Paul\u0027s illness,",
-                          "zh":  "在保罗患病初期，"
+                          "zh":  "在保罗患病初期，",
+                          "t":  250.42
                       },
                       {
                           "i":  46,
                           "en":  "we agreed we would just keep saying things out loud.",
-                          "zh":  "我们同意我们会继续大声说出来。"
+                          "zh":  "我们同意我们会继续大声说出来。",
+                          "t":  252.48
                       },
                       {
                           "i":  47,
                           "en":  "Tasks like making a will or completing our advanced directives,",
-                          "zh":  "诸如立遗嘱或完成我们的高级指令之类的任务，"
+                          "zh":  "诸如立遗嘱或完成我们的高级指令之类的任务，",
+                          "t":  257.26
                       },
                       {
                           "i":  48,
                           "en":  "tasks that I had always avoided, were not as daunting as they once seemed.",
-                          "zh":  "我一直回避的任务并不像以前看起来那么令人畏惧。"
+                          "zh":  "我一直回避的任务并不像以前看起来那么令人畏惧。",
+                          "t":  262.36
                       },
                       {
                           "i":  49,
                           "en":  "I realized that completing an advanced directive is an act of love,",
-                          "zh":  "我意识到完成高级指示是一种爱的行为，"
+                          "zh":  "我意识到完成高级指示是一种爱的行为，",
+                          "t":  267.84
                       },
                       {
                           "i":  50,
                           "en":  "like a wedding vow, a pact to take care of someone,",
-                          "zh":  "就像结婚誓言，照顾某人的契约，"
+                          "zh":  "就像结婚誓言，照顾某人的契约，",
+                          "t":  272.58
                       },
                       {
                           "i":  51,
                           "en":  "codifying the promise that till death do us part, I will be there.",
-                          "zh":  "写下这样的承诺：直到死亡将我们分开，我都会在那里。"
+                          "zh":  "写下这样的承诺：直到死亡将我们分开，我都会在那里。",
+                          "t":  278.22
                       },
                       {
                           "i":  52,
                           "en":  "If needed, I will speak for you.",
-                          "zh":  "如果需要的话，我会为你说话。"
+                          "zh":  "如果需要的话，我会为你说话。",
+                          "t":  285.36
                       },
                       {
                           "i":  53,
                           "en":  "I will honor your wishes.",
-                          "zh":  "我会尊重你的愿望。"
+                          "zh":  "我会尊重你的愿望。",
+                          "t":  289.2
                       },
                       {
                           "i":  54,
                           "en":  "That paperwork became a tangible part of our love story.",
-                          "zh":  "这份文书工作成为我们爱情故事的有形部分。"
+                          "zh":  "这份文书工作成为我们爱情故事的有形部分。",
+                          "t":  292.92
                       },
                       {
                           "i":  55,
                           "en":  "As physicians, Paul and I were in a good position to understand",
-                          "zh":  "作为医生，保罗和我能够很好地理解"
+                          "zh":  "作为医生，保罗和我能够很好地理解",
+                          "t":  298.48
                       },
                       {
                           "i":  56,
                           "en":  "and even accept his diagnosis.",
-                          "zh":  "甚至接受他的诊断。"
+                          "zh":  "甚至接受他的诊断。",
+                          "t":  302.42
                       },
                       {
                           "i":  57,
                           "en":  "We weren\u0027t angry about it, luckily,",
-                          "zh":  "幸运的是，我们并没有为此生气"
+                          "zh":  "幸运的是，我们并没有为此生气",
+                          "t":  305.9
                       },
                       {
                           "i":  58,
                           "en":  "because we\u0027d seen so many patients in devastating situations",
-                          "zh":  "因为我们见过很多处于毁灭性境地的病人"
+                          "zh":  "因为我们见过很多处于毁灭性境地的病人",
+                          "t":  308.76
                       },
                       {
                           "i":  59,
                           "en":  "and we knew that death is a part of life.",
-                          "zh":  "我们知道死亡是生命的一部分。"
+                          "zh":  "我们知道死亡是生命的一部分。",
+                          "t":  312.56
                       },
                       {
                           "i":  60,
                           "en":  "But it\u0027s one thing to know that it was a very different experience",
-                          "zh":  "但知道这是一次非常不同的经历是一回事"
+                          "zh":  "但知道这是一次非常不同的经历是一回事",
+                          "t":  317.42
                       },
                       {
                           "i":  61,
                           "en":  "to actually live with the sadness and uncertainty of a serious illness.",
-                          "zh":  "真正忍受严重疾病的悲伤和不确定性。"
+                          "zh":  "真正忍受严重疾病的悲伤和不确定性。",
+                          "t":  320.9
                       },
                       {
                           "i":  62,
                           "en":  "Huge strides are being made against lung cancer.",
-                          "zh":  "对抗肺癌正在取得巨大进展。"
+                          "zh":  "对抗肺癌正在取得巨大进展。",
+                          "t":  326.64
                       },
                       {
                           "i":  63,
                           "en":  "But we knew that Paul likely had months to a few years left to live.",
-                          "zh":  "但我们知道保罗可能只剩下几个月到几年的生命了。"
+                          "zh":  "但我们知道保罗可能只剩下几个月到几年的生命了。",
+                          "t":  329.84
                       },
                       {
                           "i":  64,
                           "en":  "During that time, Paul wrote about his transition from doctor to patient.",
-                          "zh":  "在那段时间，保罗写下了他从医生到病人的转变。"
+                          "zh":  "在那段时间，保罗写下了他从医生到病人的转变。",
+                          "t":  336.32
                       },
                       {
                           "i":  65,
                           "en":  "He talked about feeling like he was suddenly at a crossroads",
-                          "zh":  "他谈到感觉自己突然站在十字路口"
+                          "zh":  "他谈到感觉自己突然站在十字路口",
+                          "t":  340.34
                       },
                       {
                           "i":  66,
                           "en":  "and how he would have thought he\u0027d be able to see the path",
-                          "zh":  "他本以为自己能够看到那条路"
+                          "zh":  "他本以为自己能够看到那条路",
+                          "t":  344.86
                       },
                       {
                           "i":  67,
                           "en":  "that because he treated so many patients,",
-                          "zh":  "因为他治疗了这么多病人"
+                          "zh":  "因为他治疗了这么多病人",
+                          "t":  348.14
                       },
                       {
                           "i":  68,
                           "en":  "maybe he could follow in their footsteps.",
-                          "zh":  "也许他可以追随他们的脚步。"
+                          "zh":  "也许他可以追随他们的脚步。",
+                          "t":  351.86
                       },
                       {
                           "i":  69,
                           "en":  "But he was totally disoriented.",
-                          "zh":  "但他完全迷失了方向。"
+                          "zh":  "但他完全迷失了方向。",
+                          "t":  353.88
                       },
                       {
                           "i":  70,
                           "en":  "Rather than a path, Paul wrote,",
-                          "zh":  "保罗写道，而不是一条道路，"
+                          "zh":  "保罗写道，而不是一条道路，",
+                          "t":  358
                       },
                       {
                           "i":  71,
                           "en":  "I saw instead only a harsh, vacant, gleaming white desert",
-                          "zh":  "我看到的只是一片严酷、空旷、闪闪发光的白色沙漠"
+                          "zh":  "我看到的只是一片严酷、空旷、闪闪发光的白色沙漠",
+                          "t":  361.84
                       },
                       {
                           "i":  72,
                           "en":  "as if a sandstorm had erased all familiarity.",
-                          "zh":  "仿佛一场沙尘暴抹去了所有的熟悉。"
+                          "zh":  "仿佛一场沙尘暴抹去了所有的熟悉。",
+                          "t":  367.64
                       },
                       {
                           "i":  73,
                           "en":  "I had to face my mortality and try to understand",
-                          "zh":  "我必须面对死亡并尝试去理解"
+                          "zh":  "我必须面对死亡并尝试去理解",
+                          "t":  372.94
                       },
                       {
                           "i":  74,
                           "en":  "what made my life worth living.",
-                          "zh":  "是什么让我的生活变得有价值。"
+                          "zh":  "是什么让我的生活变得有价值。",
+                          "t":  377.12
                       },
                       {
                           "i":  75,
                           "en":  "And I needed my oncologist\u0027s help to do so.",
-                          "zh":  "我需要肿瘤科医生的帮助才能做到这一点。"
+                          "zh":  "我需要肿瘤科医生的帮助才能做到这一点。",
+                          "t":  379.46
                       },
                       {
                           "i":  76,
                           "en":  "The clinicians taking care of Paul gave me an even deeper appreciation",
-                          "zh":  "照顾保罗的临床医生给了我更深的赞赏"
+                          "zh":  "照顾保罗的临床医生给了我更深的赞赏",
+                          "t":  387.2
                       },
                       {
                           "i":  77,
                           "en":  "for my colleagues in health care.",
-                          "zh":  "献给我的医疗保健同事。"
+                          "zh":  "献给我的医疗保健同事。",
+                          "t":  391.28
                       },
                       {
                           "i":  78,
                           "en":  "We have a tough job.",
-                          "zh":  "我们的工作很艰巨。"
+                          "zh":  "我们的工作很艰巨。",
+                          "t":  393.88
                       },
                       {
                           "i":  79,
                           "en":  "We\u0027re responsible for helping patients have clarity",
-                          "zh":  "我们有责任帮助患者理清思路"
+                          "zh":  "我们有责任帮助患者理清思路",
+                          "t":  396.02
                       },
                       {
                           "i":  80,
                           "en":  "around their prognosis and their treatment options.",
-                          "zh":  "围绕他们的预后和治疗选择。"
+                          "zh":  "围绕他们的预后和治疗选择。",
+                          "t":  399
                       },
                       {
                           "i":  81,
                           "en":  "And that\u0027s never easy, but it\u0027s especially tough",
-                          "zh":  "这从来都不容易，但特别困难"
+                          "zh":  "这从来都不容易，但特别困难",
+                          "t":  402.68
                       },
                       {
                           "i":  82,
                           "en":  "when you\u0027re dealing with potentially terminal illnesses like cancer.",
-                          "zh":  "当您正在应对癌症等潜在的绝症时。"
+                          "zh":  "当您正在应对癌症等潜在的绝症时。",
+                          "t":  405.24
                       },
                       {
                           "i":  83,
                           "en":  "Some people don\u0027t want to know how long they have left.",
-                          "zh":  "有些人不想知道自己还剩下多久。"
+                          "zh":  "有些人不想知道自己还剩下多久。",
+                          "t":  410.6
                       },
                       {
                           "i":  84,
                           "en":  "Others do.",
-                          "zh":  "其他人则这样做。"
+                          "zh":  "其他人则这样做。",
+                          "t":  414.32
                       },
                       {
                           "i":  85,
                           "en":  "Either way, we never have those answers.",
-                          "zh":  "不管怎样，我们永远不会得到这些答案。"
+                          "zh":  "不管怎样，我们永远不会得到这些答案。",
+                          "t":  416.06
                       },
                       {
                           "i":  86,
                           "en":  "Sometimes we substitute hope",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  420.78
                       },
                       {
                           "i":  87,
                           "en":  "by emphasizing the best case scenario.",
-                          "zh":  "通过强调最好的情况。"
+                          "zh":  "通过强调最好的情况。",
+                          "t":  424.22
                       },
                       {
                           "i":  88,
                           "en":  "In a survey of physicians, 55% said they\u0027d painted a rosier picture",
-                          "zh":  "在一项针对医生的调查中，55% 的人表示他们描绘了一幅更加乐观的景象"
+                          "zh":  "在一项针对医生的调查中，55% 的人表示他们描绘了一幅更加乐观的景象",
+                          "t":  428.46
                       },
                       {
                           "i":  89,
                           "en":  "than their honest opinion when describing a patient\u0027s prognosis.",
-                          "zh":  "而不是他们在描述患者预后时的诚实意见。"
+                          "zh":  "而不是他们在描述患者预后时的诚实意见。",
+                          "t":  435.42
                       },
                       {
                           "i":  90,
                           "en":  "It\u0027s an instinct born out of kindness.",
-                          "zh":  "这是一种源于善良的本能。"
+                          "zh":  "这是一种源于善良的本能。",
+                          "t":  440.18
                       },
                       {
                           "i":  91,
                           "en":  "But researchers have found that when people better understand",
-                          "zh":  "但研究人员发现，当人们更好地理解"
+                          "zh":  "但研究人员发现，当人们更好地理解",
+                          "t":  444.24
                       },
                       {
                           "i":  92,
                           "en":  "the possible outcomes of an illness,",
-                          "zh":  "疾病可能产生的结果，"
+                          "zh":  "疾病可能产生的结果，",
+                          "t":  448.36
                       },
                       {
                           "i":  93,
                           "en":  "they have less anxiety, greater ability to plan,",
-                          "zh":  "他们的焦虑更少，计划能力更强，"
+                          "zh":  "他们的焦虑更少，计划能力更强，",
+                          "t":  450.94
                       },
                       {
                           "i":  94,
                           "en":  "and less trauma for their families.",
-                          "zh":  "并减少对家人的伤害。"
+                          "zh":  "并减少对家人的伤害。",
+                          "t":  455.98
                       },
                       {
                           "i":  95,
                           "en":  "Families can struggle with those conversations.",
-                          "zh":  "家人可能会因为这些谈话而感到困难。"
+                          "zh":  "家人可能会因为这些谈话而感到困难。",
+                          "t":  461.06
                       },
                       {
                           "i":  96,
                           "en":  "But for us, we also found that information",
-                          "zh":  "但对于我们来说，我们还发现了这样的信息"
+                          "zh":  "但对于我们来说，我们还发现了这样的信息",
+                          "t":  463.74
                       },
                       {
                           "i":  97,
                           "en":  "immensely helpful with big decisions.",
-                          "zh":  "对重大决策有很大帮助。"
+                          "zh":  "对重大决策有很大帮助。",
+                          "t":  467.34
                       },
                       {
                           "i":  98,
                           "en":  "Most notably, whether to have a baby.",
-                          "zh":  "最重要的是，是否要生孩子。"
+                          "zh":  "最重要的是，是否要生孩子。",
+                          "t":  471.12
                       },
                       {
                           "i":  99,
                           "en":  "Months to a few years,",
-                          "zh":  "几个月到几年，"
+                          "zh":  "几个月到几年，",
+                          "t":  477.04
                       },
                       {
                           "i":  100,
                           "en":  "meant Paul was not likely to see her grow up.",
-                          "zh":  "这意味着保罗不太可能看到她长大。"
+                          "zh":  "这意味着保罗不太可能看到她长大。",
+                          "t":  478.92
                       },
                       {
                           "i":  101,
                           "en":  "But he had a good chance of being there for her birth",
-                          "zh":  "但他很有可能在她出生时在场"
+                          "zh":  "但他很有可能在她出生时在场",
+                          "t":  483
                       },
                       {
                           "i":  102,
                           "en":  "and for the beginning of her life.",
-                          "zh":  "以及她生命的开始。"
+                          "zh":  "以及她生命的开始。",
+                          "t":  485.4
                       },
                       {
                           "i":  103,
                           "en":  "I remember asking Paul if he thought having to say goodbye",
-                          "zh":  "我记得我问保罗是否觉得必须说再见"
+                          "zh":  "我记得我问保罗是否觉得必须说再见",
+                          "t":  488.8
                       },
                       {
                           "i":  104,
                           "en":  "to a child would make dying even more painful.",
-                          "zh":  "对于一个孩子来说，死亡会更加痛苦。"
+                          "zh":  "对于一个孩子来说，死亡会更加痛苦。",
+                          "t":  492.96
                       },
                       {
                           "i":  105,
                           "en":  "And his answer astounded me.",
-                          "zh":  "他的回答让我大吃一惊。"
+                          "zh":  "他的回答让我大吃一惊。",
+                          "t":  497.54
                       },
                       {
                           "i":  106,
                           "en":  "He said, wouldn\u0027t it be great if it did?",
-                          "zh":  "他说，如果这样不是很好吗？"
+                          "zh":  "他说，如果这样不是很好吗？",
+                          "t":  500.4
                       },
                       {
                           "i":  107,
                           "en":  "And we did it.",
-                          "zh":  "我们做到了。"
+                          "zh":  "我们做到了。",
+                          "t":  508.14
                       },
                       {
                           "i":  108,
                           "en":  "Not in order to spite cancer.",
-                          "zh":  "不是为了对抗癌症。"
+                          "zh":  "不是为了对抗癌症。",
+                          "t":  510.16
                       },
                       {
                           "i":  109,
                           "en":  "But because we were learning that living fully means",
-                          "zh":  "但因为我们了解到，生活的充实意味着"
+                          "zh":  "但因为我们了解到，生活的充实意味着",
+                          "t":  513.64
                       },
                       {
                           "i":  110,
                           "en":  "accepting suffering.",
-                          "zh":  "接受痛苦。"
+                          "zh":  "接受痛苦。",
+                          "t":  519.34
                       },
                       {
                           "i":  111,
                           "en":  "Paul\u0027s oncologist tailored his chemo",
-                          "zh":  "保罗的肿瘤科医生定制了他的化疗方案"
+                          "zh":  "保罗的肿瘤科医生定制了他的化疗方案",
+                          "t":  524.28
                       },
                       {
                           "i":  112,
                           "en":  "so he could continue working as a neurosurgeon,",
-                          "zh":  "这样他就可以继续作为一名神经外科医生工作"
+                          "zh":  "这样他就可以继续作为一名神经外科医生工作",
+                          "t":  526.52
                       },
                       {
                           "i":  113,
                           "en":  "which initially we thought was totally impossible.",
-                          "zh":  "最初我们认为这是完全不可能的。"
+                          "zh":  "最初我们认为这是完全不可能的。",
+                          "t":  529.8
                       },
                       {
                           "i":  114,
                           "en":  "When the cancer advanced and Paul shifted from surgery",
-                          "zh":  "当癌症进展并且保罗放弃手术时"
+                          "zh":  "当癌症进展并且保罗放弃手术时",
+                          "t":  533.7
                       },
                       {
                           "i":  115,
                           "en":  "to writing, his palliative care doctor",
-                          "zh":  "写到，他的姑息治疗医生"
+                          "zh":  "写到，他的姑息治疗医生",
+                          "t":  536.8
                       },
                       {
                           "i":  116,
                           "en":  "prescribed a stimulant medication",
-                          "zh":  "开了兴奋剂药物"
+                          "zh":  "开了兴奋剂药物",
+                          "t":  539.98
                       },
                       {
                           "i":  117,
                           "en":  "so he could be more focused.",
-                          "zh":  "这样他就可以更加专注。"
+                          "zh":  "这样他就可以更加专注。",
+                          "t":  541.78
                       },
                       {
                           "i":  118,
                           "en":  "They asked Paul about his priorities and his worries.",
-                          "zh":  "他们询问保罗的优先事项和担忧。"
+                          "zh":  "他们询问保罗的优先事项和担忧。",
+                          "t":  543.88
                       },
                       {
                           "i":  119,
                           "en":  "They asked him what trade-offs he was willing to make.",
-                          "zh":  "他们问他愿意做出哪些权衡。"
+                          "zh":  "他们问他愿意做出哪些权衡。",
+                          "t":  549.22
                       },
                       {
                           "i":  120,
                           "en":  "Those conversations are the best way",
-                          "zh":  "这些对话是最好的方式"
+                          "zh":  "这些对话是最好的方式",
+                          "t":  554.72
                       },
                       {
                           "i":  121,
                           "en":  "to ensure that your healthcare matches your values.",
-                          "zh":  "确保您的医疗保健符合您的价值观。"
+                          "zh":  "确保您的医疗保健符合您的价值观。",
+                          "t":  558.06
                       },
                       {
                           "i":  122,
                           "en":  "Paul joked that it\u0027s not like that birds and bees talk",
-                          "zh":  "保罗开玩笑说这不像鸟和蜜蜂会说话"
+                          "zh":  "保罗开玩笑说这不像鸟和蜜蜂会说话",
+                          "t":  564.48
                       },
                       {
                           "i":  123,
                           "en":  "you have with your parents, where you all get it over with",
-                          "zh":  "你和你的父母有过这样的经历，你们都可以结束这一切"
+                          "zh":  "你和你的父母有过这样的经历，你们都可以结束这一切",
+                          "t":  567.96
                       },
                       {
                           "i":  124,
                           "en":  "as quickly as possible and then pretend it never happened.",
-                          "zh":  "尽快，然后假装这件事从未发生过。"
+                          "zh":  "尽快，然后假装这件事从未发生过。",
+                          "t":  570.02
                       },
                       {
                           "i":  125,
                           "en":  "You revisit the conversation as things change.",
-                          "zh":  "随着事情的变化，你会重新审视谈话。"
+                          "zh":  "随着事情的变化，你会重新审视谈话。",
+                          "t":  575.48
                       },
                       {
                           "i":  126,
                           "en":  "You keep saying things out loud.",
-                          "zh":  "你总是大声地说出话来。"
+                          "zh":  "你总是大声地说出话来。",
+                          "t":  580.7
                       },
                       {
                           "i":  127,
                           "en":  "I\u0027m forever grateful because Paul\u0027s clinicians felt",
-                          "zh":  "我永远感激不已，因为保罗的临床医生认为"
+                          "zh":  "我永远感激不已，因为保罗的临床医生认为",
+                          "t":  583.44
                       },
                       {
                           "i":  128,
                           "en":  "that their job wasn\u0027t to try to give us answers they didn\u0027t have",
-                          "zh":  "他们的工作不是试图给我们他们没有的答案"
+                          "zh":  "他们的工作不是试图给我们他们没有的答案",
+                          "t":  585.48
                       },
                       {
                           "i":  129,
                           "en":  "or only to try to fix things for us.",
-                          "zh":  "或者只是尝试为我们解决问题。"
+                          "zh":  "或者只是尝试为我们解决问题。",
+                          "t":  589.06
                       },
                       {
                           "i":  130,
                           "en":  "But to counsel Paul through painful choices,",
-                          "zh":  "但为了劝告保罗度过痛苦的选择，"
+                          "zh":  "但为了劝告保罗度过痛苦的选择，",
+                          "t":  596.5
                       },
                       {
                           "i":  131,
                           "en":  "when his body was failing, but his will to live wasn\u0027t.",
-                          "zh":  "当他的身体衰弱时，但他的生存意志却没有。"
+                          "zh":  "当他的身体衰弱时，但他的生存意志却没有。",
+                          "t":  601.72
                       },
                       {
                           "i":  132,
                           "en":  "Later, after Paul died, I received a dozen bouquets",
-                          "zh":  "后来保罗去世后，我收到了十几束花"
+                          "zh":  "后来保罗去世后，我收到了十几束花",
+                          "t":  606.8
                       },
                       {
                           "i":  133,
                           "en":  "of flowers, but I sent just one to Paul\u0027s oncologist",
-                          "zh":  "鲜花，但我只送了一朵给保罗的肿瘤科医生"
+                          "zh":  "鲜花，但我只送了一朵给保罗的肿瘤科医生",
+                          "t":  612.84
                       },
                       {
                           "i":  134,
                           "en":  "because she supported his goals",
-                          "zh":  "因为她支持他的目标"
+                          "zh":  "因为她支持他的目标",
+                          "t":  618.18
                       },
                       {
                           "i":  135,
                           "en":  "and she helped him weigh his choices.",
-                          "zh":  "她帮助他权衡他的选择。"
+                          "zh":  "她帮助他权衡他的选择。",
+                          "t":  620.94
                       },
                       {
                           "i":  136,
                           "en":  "She knew that living means more than just staying alive.",
-                          "zh":  "她知道，活着不仅仅意味着活着。"
+                          "zh":  "她知道，活着不仅仅意味着活着。",
+                          "t":  626.04
                       },
                       {
                           "i":  137,
                           "en":  "A few weeks ago, a patient came into my clinic,",
-                          "zh":  "几周前，一位病人来到我的诊所，"
+                          "zh":  "几周前，一位病人来到我的诊所，",
+                          "t":  629.9
                       },
                       {
                           "i":  138,
                           "en":  "a woman dealing with a serious chronic disease,",
-                          "zh":  "患有严重慢性疾病的女性，"
+                          "zh":  "患有严重慢性疾病的女性，",
+                          "t":  634.1
                       },
                       {
                           "i":  139,
                           "en":  "and while we were talking about her life and her healthcare,",
-                          "zh":  "当我们谈论她的生活和医疗保健时，"
+                          "zh":  "当我们谈论她的生活和医疗保健时，",
+                          "t":  637.22
                       },
                       {
                           "i":  140,
                           "en":  "she said, I love my palliative care team.",
-                          "zh":  "她说，我爱我的姑息治疗团队。"
+                          "zh":  "她说，我爱我的姑息治疗团队。",
+                          "t":  641.4
                       },
                       {
                           "i":  141,
                           "en":  "They taught me that it\u0027s okay to say no.",
-                          "zh":  "他们告诉我，拒绝是可以的。"
+                          "zh":  "他们告诉我，拒绝是可以的。",
+                          "t":  644.82
                       },
                       {
                           "i":  142,
                           "en":  "Yeah, I thought, of course it is.",
-                          "zh":  "是的，我想，当然是这样。"
+                          "zh":  "是的，我想，当然是这样。",
+                          "t":  651.4
                       },
                       {
                           "i":  143,
                           "en":  "But many patients don\u0027t feel that.",
-                          "zh":  "但很多患者并没有这种感觉。"
+                          "zh":  "但很多患者并没有这种感觉。",
+                          "t":  653.38
                       },
                       {
                           "i":  144,
                           "en":  "Compassion and choices did a study",
-                          "zh":  "同情心和选择做了一项研究"
+                          "zh":  "同情心和选择做了一项研究",
+                          "t":  656.65
                       },
                       {
                           "i":  145,
                           "en":  "where they asked people about their healthcare preferences",
-                          "zh":  "他们询问人们的医疗保健偏好"
+                          "zh":  "他们询问人们的医疗保健偏好",
+                          "t":  658.2
                       },
                       {
                           "i":  146,
                           "en":  "and a lot of people started their answers with the words,",
-                          "zh":  "很多人的回答都是这样开始的："
+                          "zh":  "很多人的回答都是这样开始的：",
+                          "t":  661.36
                       },
                       {
                           "i":  147,
                           "en":  "well, if I had a choice, if I had a choice.",
-                          "zh":  "好吧，如果我有选择的话，如果我有选择的话。"
+                          "zh":  "好吧，如果我有选择的话，如果我有选择的话。",
+                          "t":  667.22
                       },
                       {
                           "i":  148,
                           "en":  "And when I read that, if I understood better,",
-                          "zh":  "当我读到这篇文章时，如果我能更好地理解的话，"
+                          "zh":  "当我读到这篇文章时，如果我能更好地理解的话，",
+                          "t":  673.8
                       },
                       {
                           "i":  149,
                           "en":  "why one in four people receives excessive",
-                          "zh":  "为什么四分之一的人接受过多的治疗"
+                          "zh":  "为什么四分之一的人接受过多的治疗",
+                          "t":  679.66
                       },
                       {
                           "i":  150,
                           "en":  "or unwanted medical treatment or watches a family member receive",
-                          "zh":  "或不需要的医疗或看着家庭成员接受"
+                          "zh":  "或不需要的医疗或看着家庭成员接受",
+                          "t":  683.42
                       },
                       {
                           "i":  151,
                           "en":  "excessive or unwanted medical treatment?",
-                          "zh":  "过度或不必要的医疗？"
+                          "zh":  "过度或不必要的医疗？",
+                          "t":  688.08
                       },
                       {
                           "i":  152,
                           "en":  "It\u0027s not because doctors don\u0027t get it, we do.",
-                          "zh":  "这并不是因为医生不明白，而是我们明白。"
+                          "zh":  "这并不是因为医生不明白，而是我们明白。",
+                          "t":  691.2
                       },
                       {
                           "i":  153,
                           "en":  "We understand the real psychological consequences",
-                          "zh":  "我们了解真正的心理后果"
+                          "zh":  "我们了解真正的心理后果",
+                          "t":  696.26
                       },
                       {
                           "i":  154,
                           "en":  "on patients and their families.",
-                          "zh":  "对患者及其家属。"
+                          "zh":  "对患者及其家属。",
+                          "t":  699.1
                       },
                       {
                           "i":  155,
                           "en":  "The thing is we deal with them too.",
-                          "zh":  "问题是我们也和他们打交道。"
+                          "zh":  "问题是我们也和他们打交道。",
+                          "t":  701.22
                       },
                       {
                           "i":  156,
                           "en":  "Half of critical care nurses and a quarter of ICU doctors",
-                          "zh":  "一半的重症监护护士和四分之一的 ICU 医生"
+                          "zh":  "一半的重症监护护士和四分之一的 ICU 医生",
+                          "t":  705.28
                       },
                       {
                           "i":  157,
                           "en":  "have considered quitting their jobs because of distress",
-                          "zh":  "由于困难而考虑过辞职"
+                          "zh":  "由于困难而考虑过辞职",
+                          "t":  710.18
                       },
                       {
                           "i":  158,
                           "en":  "over feeling that for some of their patients,",
-                          "zh":  "过度感觉对于他们的一些患者来说"
+                          "zh":  "过度感觉对于他们的一些患者来说",
+                          "t":  713.6
                       },
                       {
                           "i":  159,
                           "en":  "they\u0027ve provided care that didn\u0027t fit with the person\u0027s values.",
-                          "zh":  "他们提供的护理与患者的价值观不符。"
+                          "zh":  "他们提供的护理与患者的价值观不符。",
+                          "t":  718.26
                       },
                       {
                           "i":  160,
                           "en":  "But doctors can\u0027t make sure your wishes are respected",
-                          "zh":  "但医生无法确保您的意愿得到尊重"
+                          "zh":  "但医生无法确保您的意愿得到尊重",
+                          "t":  721.52
                       },
                       {
                           "i":  161,
                           "en":  "until they know what they are.",
-                          "zh":  "直到他们知道自己是什么。"
+                          "zh":  "直到他们知道自己是什么。",
+                          "t":  725.26
                       },
                       {
                           "i":  162,
                           "en":  "Would you want to be on life support",
-                          "zh":  "您想接受生命支持吗"
+                          "zh":  "您想接受生命支持吗",
+                          "t":  726.8
                       },
                       {
                           "i":  163,
                           "en":  "if it offered any chance of longer life?",
-                          "zh":  "它是否提供了延长寿命的机会？"
+                          "zh":  "它是否提供了延长寿命的机会？",
+                          "t":  730.38
                       },
                       {
                           "i":  164,
                           "en":  "Are you most worried about the quality of that time",
-                          "zh":  "你最担心的是那段时间的质量吗"
+                          "zh":  "你最担心的是那段时间的质量吗",
+                          "t":  735.62
                       },
                       {
                           "i":  165,
                           "en":  "rather than quantity?",
-                          "zh":  "而不是数量？"
+                          "zh":  "而不是数量？",
+                          "t":  740.18
                       },
                       {
                           "i":  166,
                           "en":  "Both of those choices are thoughtful and brave.",
-                          "zh":  "这两个选择都是经过深思熟虑和勇敢的。"
+                          "zh":  "这两个选择都是经过深思熟虑和勇敢的。",
+                          "t":  742.48
                       },
                       {
                           "i":  167,
                           "en":  "But for all of us, it\u0027s our choice.",
-                          "zh":  "但对于我们所有人来说，这是我们的选择。"
+                          "zh":  "但对于我们所有人来说，这是我们的选择。",
+                          "t":  745.24
                       },
                       {
                           "i":  168,
                           "en":  "That\u0027s true at the end of life and for medical care",
-                          "zh":  "对于临终和医疗护理来说都是如此"
+                          "zh":  "对于临终和医疗护理来说都是如此",
+                          "t":  748.06
                       },
                       {
                           "i":  169,
                           "en":  "throughout our lives.",
-                          "zh":  "贯穿我们的一生。"
+                          "zh":  "贯穿我们的一生。",
+                          "t":  751.74
                       },
                       {
                           "i":  170,
                           "en":  "If you\u0027re pregnant, do you want genetic screening?",
-                          "zh":  "如果您怀孕了，需要进行基因筛查吗？"
+                          "zh":  "如果您怀孕了，需要进行基因筛查吗？",
+                          "t":  753.78
                       },
                       {
                           "i":  171,
                           "en":  "Is a knee replacement right or not?",
-                          "zh":  "膝关节置换术正确与否？"
+                          "zh":  "膝关节置换术正确与否？",
+                          "t":  759
                       },
                       {
                           "i":  172,
                           "en":  "Do you want to do dialysis in a clinic or at home?",
-                          "zh":  "您想在诊所还是在家进行透析？"
+                          "zh":  "您想在诊所还是在家进行透析？",
+                          "t":  764.36
                       },
                       {
                           "i":  173,
                           "en":  "The answer is, it depends.",
-                          "zh":  "答案是，这取决于情况。"
+                          "zh":  "答案是，这取决于情况。",
+                          "t":  770.66
                       },
                       {
                           "i":  174,
                           "en":  "What medical care will help you live the way you want to?",
-                          "zh":  "哪些医疗护理可以帮助您按照自己想要的方式生活？"
+                          "zh":  "哪些医疗护理可以帮助您按照自己想要的方式生活？",
+                          "t":  772.56
                       },
                       {
                           "i":  175,
                           "en":  "I hope you remember that question the next time",
-                          "zh":  "我希望你下次记住这个问题"
+                          "zh":  "我希望你下次记住这个问题",
+                          "t":  777.88
                       },
                       {
                           "i":  176,
                           "en":  "you face a decision in your health care.",
-                          "zh":  "您面临医疗保健方面的决定。"
+                          "zh":  "您面临医疗保健方面的决定。",
+                          "t":  784.4
                       },
                       {
                           "i":  177,
                           "en":  "Remember that you always have a choice.",
-                          "zh":  "请记住，您始终有选择。"
+                          "zh":  "请记住，您始终有选择。",
+                          "t":  790.12
                       },
                       {
                           "i":  178,
                           "en":  "And it is OK to say no to a treatment",
-                          "zh":  "对治疗说“不”是可以的"
+                          "zh":  "对治疗说“不”是可以的",
+                          "t":  792.82
                       },
                       {
                           "i":  179,
                           "en":  "that\u0027s not right for you.",
-                          "zh":  "那不适合你。"
+                          "zh":  "那不适合你。",
+                          "t":  799.02
                       },
                       {
                           "i":  180,
                           "en":  "There\u0027s a poem by W.S.",
-                          "zh":  "W.S. 有一首诗。"
+                          "zh":  "W.S. 有一首诗。",
+                          "t":  802
                       },
                       {
                           "i":  181,
                           "en":  "Merwin.",
-                          "zh":  "默温。"
+                          "zh":  "默温。",
+                          "t":  806.06
                       },
                       {
                           "i":  182,
                           "en":  "It\u0027s just two sentences long.",
-                          "zh":  "只有两句话那么长。"
+                          "zh":  "只有两句话那么长。",
+                          "t":  806.32
                       },
                       {
                           "i":  183,
                           "en":  "The capture is how I feel now.",
-                          "zh":  "捕获就是我现在的感受。"
+                          "zh":  "捕获就是我现在的感受。",
+                          "t":  810.34
                       },
                       {
                           "i":  184,
                           "en":  "Your absence has gone through me, like thread,",
-                          "zh":  "你的缺席像线一样贯穿了我，"
+                          "zh":  "你的缺席像线一样贯穿了我，",
+                          "t":  813.72
                       },
                       {
                           "i":  185,
                           "en":  "through a needle.",
-                          "zh":  "通过针。"
+                          "zh":  "通过针。",
+                          "t":  817.5
                       },
                       {
                           "i":  186,
                           "en":  "Everything I do is stitched with its color.",
-                          "zh":  "我所做的一切都是用它的颜色缝合的。"
+                          "zh":  "我所做的一切都是用它的颜色缝合的。",
+                          "t":  820.5
                       },
                       {
                           "i":  187,
                           "en":  "For me, that poem evokes my love for Paul",
-                          "zh":  "对我来说，那首诗唤起了我对保罗的爱"
+                          "zh":  "对我来说，那首诗唤起了我对保罗的爱",
+                          "t":  824.16
                       },
                       {
                           "i":  188,
                           "en":  "and a new fortitude that came from loving and losing him.",
-                          "zh":  "以及因爱他和失去他而产生的新的毅力。"
+                          "zh":  "以及因爱他和失去他而产生的新的毅力。",
+                          "t":  831.86
                       },
                       {
                           "i":  189,
                           "en":  "When Paul said, it\u0027s going to be OK,",
-                          "zh":  "当保罗说“一切都会好起来”时"
+                          "zh":  "当保罗说“一切都会好起来”时",
+                          "t":  837.8
                       },
                       {
                           "i":  190,
                           "en":  "that didn\u0027t mean that we could cure his illness.",
-                          "zh":  "这并不意味着我们可以治愈他的病。"
+                          "zh":  "这并不意味着我们可以治愈他的病。",
+                          "t":  842.4
                       },
                       {
                           "i":  191,
                           "en":  "Instead, we learned to accept both joy and sadness",
-                          "zh":  "相反，我们学会了接受快乐和悲伤"
+                          "zh":  "相反，我们学会了接受快乐和悲伤",
+                          "t":  847.48
                       },
                       {
                           "i":  192,
                           "en":  "at the same time, to uncover beauty and purpose",
-                          "zh":  "同时，发现美丽和目的"
+                          "zh":  "同时，发现美丽和目的",
+                          "t":  852.14
                       },
                       {
                           "i":  193,
                           "en":  "both despite and because we are all born and we all die.",
-                          "zh":  "尽管并且因为我们都出生了并且我们都死了。"
+                          "zh":  "尽管并且因为我们都出生了并且我们都死了。",
+                          "t":  855.56
                       },
                       {
                           "i":  194,
                           "en":  "And for all the sadness and sleepless nights,",
-                          "zh":  "对于所有的悲伤和不眠之夜，"
+                          "zh":  "对于所有的悲伤和不眠之夜，",
+                          "t":  860.86
                       },
                       {
                           "i":  195,
                           "en":  "it turns out there is joy.",
-                          "zh":  "原来还有欢乐。"
+                          "zh":  "原来还有欢乐。",
+                          "t":  865.92
                       },
                       {
                           "i":  196,
                           "en":  "I leave flowers on Paul\u0027s grave and watch",
-                          "zh":  "我在保罗的坟墓上留下鲜花并观看"
+                          "zh":  "我在保罗的坟墓上留下鲜花并观看",
+                          "t":  871.92
                       },
                       {
                           "i":  197,
                           "en":  "our two-year-old run around on the grass.",
-                          "zh":  "我们两岁的孩子在草地上跑来跑去。"
+                          "zh":  "我们两岁的孩子在草地上跑来跑去。",
+                          "t":  878.2
                       },
                       {
                           "i":  198,
                           "en":  "I build bonfires on the beach and watch",
-                          "zh":  "我在海滩上生起篝火并观看"
+                          "zh":  "我在海滩上生起篝火并观看",
+                          "t":  883.54
                       },
                       {
                           "i":  199,
                           "en":  "the sunset with our friends.",
-                          "zh":  "和我们的朋友一起看日落。"
+                          "zh":  "和我们的朋友一起看日落。",
+                          "t":  891.58
                       },
                       {
                           "i":  200,
                           "en":  "Exercise and mindfulness meditation have helped a lot.",
-                          "zh":  "锻炼和正念冥想有很大帮助。"
+                          "zh":  "锻炼和正念冥想有很大帮助。",
+                          "t":  893.86
                       },
                       {
                           "i":  201,
                           "en":  "And someday, I hope I do get remarried.",
-                          "zh":  "有一天，我希望我能再婚。"
+                          "zh":  "有一天，我希望我能再婚。",
+                          "t":  898.4
                       },
                       {
                           "i":  202,
                           "en":  "Most importantly, I get to watch our daughter grow.",
-                          "zh":  "最重要的是，我可以见证女儿的成长。"
+                          "zh":  "最重要的是，我可以见证女儿的成长。",
+                          "t":  903.9
                       },
                       {
                           "i":  203,
                           "en":  "I\u0027ve thought a lot about what I\u0027m going to say to her",
-                          "zh":  "我想了很多我要对她说的话"
+                          "zh":  "我想了很多我要对她说的话",
+                          "t":  911.52
                       },
                       {
                           "i":  204,
                           "en":  "when she\u0027s older, Katie.",
-                          "zh":  "当她长大后，凯蒂。"
+                          "zh":  "当她长大后，凯蒂。",
+                          "t":  917.46
                       },
                       {
                           "i":  205,
                           "en":  "Engaging in the full range of experience, living and dying,",
-                          "zh":  "参与生与死的全方位体验，"
+                          "zh":  "参与生与死的全方位体验，",
+                          "t":  921.38
                       },
                       {
                           "i":  206,
                           "en":  "love and loss is what we get to do.",
-                          "zh":  "爱和失去是我们要做的。"
+                          "zh":  "爱和失去是我们要做的。",
+                          "t":  926.78
                       },
                       {
                           "i":  207,
                           "en":  "Being human doesn\u0027t happen despite suffering.",
-                          "zh":  "尽管受苦，但成为人类并不会发生。"
+                          "zh":  "尽管受苦，但成为人类并不会发生。",
+                          "t":  929.86
                       },
                       {
                           "i":  208,
                           "en":  "It happens within it.",
-                          "zh":  "它发生在其中。"
+                          "zh":  "它发生在其中。",
+                          "t":  933.66
                       },
                       {
                           "i":  209,
                           "en":  "When we approach suffering together,",
-                          "zh":  "当我们一起面对苦难时，"
+                          "zh":  "当我们一起面对苦难时，",
+                          "t":  936.28
                       },
                       {
                           "i":  210,
                           "en":  "when we choose not to hide from it, our lives don\u0027t diminish.",
-                          "zh":  "当我们选择不逃避它时，我们的生命就不会减少。"
+                          "zh":  "当我们选择不逃避它时，我们的生命就不会减少。",
+                          "t":  938.78
                       },
                       {
                           "i":  211,
                           "en":  "They expand.",
-                          "zh":  "他们扩张。"
+                          "zh":  "他们扩张。",
+                          "t":  947.78
                       },
                       {
                           "i":  212,
                           "en":  "I\u0027ve learned that cancer isn\u0027t always a battle.",
-                          "zh":  "我了解到癌症并不总是一场战斗。"
+                          "zh":  "我了解到癌症并不总是一场战斗。",
+                          "t":  948.54
                       },
                       {
                           "i":  213,
                           "en":  "Or if it is, maybe it\u0027s a fight for something different",
-                          "zh":  "或者如果是的话，也许这是一场不同的斗争"
+                          "zh":  "或者如果是的话，也许这是一场不同的斗争",
+                          "t":  953.54
                       },
                       {
                           "i":  214,
                           "en":  "than we thought.",
-                          "zh":  "比我们想象的。"
+                          "zh":  "比我们想象的。",
+                          "t":  959.78
                       },
                       {
                           "i":  215,
                           "en":  "Our job isn\u0027t to fight fate, but to help each other through,",
-                          "zh":  "我们的工作不是对抗命运，而是互相帮助渡过难关"
+                          "zh":  "我们的工作不是对抗命运，而是互相帮助渡过难关",
+                          "t":  959.78
                       },
                       {
                           "i":  216,
                           "en":  "not as soldiers, but as shepherds.",
-                          "zh":  "不是作为士兵，而是作为牧羊人。"
+                          "zh":  "不是作为士兵，而是作为牧羊人。",
+                          "t":  959.78
                       },
                       {
                           "i":  217,
                           "en":  "That\u0027s how we make it OK, even when it\u0027s not,",
-                          "zh":  "这就是我们如何让它OK，即使它不是，"
+                          "zh":  "这就是我们如何让它OK，即使它不是，",
+                          "t":  959.78
                       },
                       {
                           "i":  218,
                           "en":  "by saying it out loud, by helping each other through.",
-                          "zh":  "大声说出来，互相帮助。"
+                          "zh":  "大声说出来，互相帮助。",
+                          "t":  959.78
                       },
                       {
                           "i":  219,
                           "en":  "And a gorilla suit never hurts you there.",
-                          "zh":  "大猩猩套装永远不会伤害你。"
+                          "zh":  "大猩猩套装永远不会伤害你。",
+                          "t":  959.78
                       },
                       {
                           "i":  220,
                           "en":  "Thank you.",
-                          "zh":  "谢谢。"
+                          "zh":  "谢谢。",
+                          "t":  959.78
                       }
                   ]
 };

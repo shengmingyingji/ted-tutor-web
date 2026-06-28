@@ -246,9 +246,9 @@ function listenSentence(){
       setStatus("▶ 正在播放这一句的原声…"); return;
     }catch(e){}
   }
-  // 本地原片：跳到这一句的时间点播放原声，到下一句自停
+  // 本地原片/电影：跳到这一句的时间点播放原声，到下一句自停
   const v=$("video");
-  if(LOCAL_SERVER && v.getAttribute("src")){
+  if(v.getAttribute("src") && v.style.display!=="none"){
     try{ v.playbackRate=speed; }catch(e){}
     if(s.t!=null){
       try{ v.currentTime=s.t; }catch(e){}
@@ -443,30 +443,138 @@ function ytStatus(t){ $("ytStatus").textContent=t||""; }
 function openYt(){ $("ytPanel").classList.remove("hidden"); $("mask").classList.remove("hidden"); }
 function closeYt(){ $("ytPanel").classList.add("hidden"); $("mask").classList.add("hidden"); }
 
-/* ---------- 本地原片 / 在线视频 模式切换 ---------- */
+/* ---------- 🎬 英文电影跟学 ---------- */
+let movieVideoUrl=null, movieSentences=null, movieTitle="英文电影";
+function movieStatus(t){ const e=$("movieStatus"); if(e) e.textContent=t||""; }
+
+// 解析字幕：支持 .srt/.vtt（含时间戳），也支持每行一句(可 || 分隔中英)的纯文本
+function parseSubtitles(text){
+  text=String(text||"").replace(/\r/g,"");
+  if(/-->/.test(text)){
+    const body=text.replace(/^﻿?WEBVTT[^\n]*\n/,"");
+    const blocks=body.split(/\n{2,}/);
+    const out=[];
+    for(let b of blocks){
+      let lines=b.split("\n").map(x=>x.trim()).filter(Boolean);
+      if(!lines.length) continue;
+      if(/^\d+$/.test(lines[0])) lines=lines.slice(1);
+      if(!lines.length) continue;
+      let t=null, textLines=lines;
+      const m=lines[0].match(/(\d{1,2}):(\d{2}):(\d{2})[.,](\d{1,3})\s*--?>/);
+      if(m){ t=(+m[1])*3600+(+m[2])*60+(+m[3])+(parseInt((m[4]+"000").slice(0,3),10))/1000; textLines=lines.slice(1); }
+      const parts=textLines.map(l=>l.replace(/<[^>]+>/g,"").replace(/\{[^}]+\}/g,"").trim()).filter(Boolean);
+      if(!parts.length) continue;
+      let en="", zh="";
+      const joined=parts.join("\n");
+      if(joined.indexOf("||")>=0){
+        const seg=joined.split("||");
+        en=(seg[0]||"").replace(/\s+/g," ").trim(); zh=(seg[1]||"").replace(/\s+/g," ").trim();
+      }else{
+        const enParts=parts.filter(p=>!/[一-鿿]/.test(p));
+        const zhParts=parts.filter(p=>/[一-鿿]/.test(p));
+        en=((enParts.length?enParts:parts).join(" ")).replace(/\s+/g," ").trim();
+        zh=zhParts.join(" ").replace(/\s+/g," ").trim();
+      }
+      if(en) out.push({en, zh, t: t!=null? Math.round(t*100)/100 : null});
+    }
+    return out;
+  }
+  // 纯文本：每行一句（|| 分隔中英）
+  let lines=text.split(/\n+/).map(s=>s.trim()).filter(Boolean);
+  if(lines.length<=1) lines=text.replace(/([.!?])\s+/g,"$1\n").split(/\n+/).map(s=>s.trim()).filter(Boolean);
+  return lines.map(line=>{ const p=line.split("||"); return { en:(p[0]||"").trim(), zh:(p[1]||"").trim(), t:null }; });
+}
+
+function setMediaMovie(url){
+  clearListenTimer();
+  if(ytPlayer && ytPlayer.pauseVideo){ try{ ytPlayer.pauseVideo(); }catch(e){} }
+  const el=document.getElementById("ytmount"); if(el){ el.classList.add("hidden"); }
+  const v=$("video"); v.style.display=""; v.src=url; try{ v.playbackRate=speed; }catch(e){}
+  const tip=$("mediaTip"); if(tip){ tip.style.display=""; tip.textContent="🎬 电影已载入。点「听原声」播放当前句的原声，拖动进度条可定位。"; }
+}
+function startMovieTalk(){
+  if(!movieSentences || !movieSentences.length){ movieStatus("请先上传/粘贴字幕。"); return; }
+  const sentences=movieSentences.map((s,i)=>({i, en:(s.en||"").trim(), zh:(s.zh||"").trim(), t:(typeof s.t==="number"? s.t : null)})).filter(s=>s.en);
+  if(!sentences.length){ movieStatus("字幕解析为空。"); return; }
+  sentences.forEach((s,i)=>s.i=i);
+  const segs=[]; for(let s=0; s*10<sentences.length; s++){ segs.push({name:"第"+(s+1)+"段", start:s*10, end:Math.min(s*10+9, sentences.length-1)}); }
+  TALK={ id:"movie", title:movieTitle||"英文电影", category:"电影", folder:null, video:null, audio:null, sentences, segments:segs, count:sentences.length };
+  renderSegOptions(); $("segSelect").value=0; onSegChange();
+  if(movieVideoUrl) setMediaMovie(movieVideoUrl);
+}
+function onMovieVideoFile(file){
+  if(!file) return;
+  if(movieVideoUrl){ try{ URL.revokeObjectURL(movieVideoUrl); }catch(e){} }
+  movieVideoUrl=URL.createObjectURL(file);
+  movieTitle=file.name.replace(/\.[^.]+$/,"");
+  setMode("movie"); setMediaMovie(movieVideoUrl);
+  if(movieSentences && movieSentences.length){ startMovieTalk(); }
+  else { movieStatus("✅ 视频已载入。请再「上传字幕」(.srt/.vtt) 或在「链接/粘贴字幕」里粘贴字幕。"); }
+}
+function onMovieSubFile(file){
+  if(!file) return;
+  const r=new FileReader();
+  r.onload=()=>{ movieSentences=parseSubtitles(String(r.result||"")); if(!movieSentences.length){ movieStatus("⚠️ 字幕解析为空，请检查文件编码(建议 UTF-8)。"); return; } setMode("movie"); startMovieTalk(); movieStatus("✅ 已载入 "+movieSentences.length+" 句字幕。"); };
+  r.onerror=()=>movieStatus("读取字幕失败。");
+  r.readAsText(file, "utf-8");
+}
+function applyMovieSubText(){
+  const raw=$("movieSubText").value.trim();
+  if(!raw){ movieStatus("请先粘贴字幕内容。"); return; }
+  movieSentences=parseSubtitles(raw);
+  if(!movieSentences.length){ movieStatus("字幕解析为空。"); return; }
+  setMode("movie"); startMovieTalk(); movieStatus("✅ 已载入 "+movieSentences.length+" 句字幕。"); closeMovie();
+}
+function loadMovieUrl(){
+  const url=$("movieUrl").value.trim();
+  if(!url){ movieStatus("请粘贴视频直链。"); return; }
+  movieVideoUrl=url; movieTitle="英文电影";
+  setMode("movie"); setMediaMovie(url);
+  if(movieSentences && movieSentences.length){ startMovieTalk(); }
+  movieStatus("✅ 视频链接已载入。" + ((movieSentences&&movieSentences.length)?"":"请再粘贴/上传字幕。"));
+}
+function openMovie(){ $("moviePanel").classList.remove("hidden"); $("mask").classList.remove("hidden"); }
+function closeMovie(){ $("moviePanel").classList.add("hidden"); $("mask").classList.add("hidden"); }
+
+/* ---------- 模式切换：本地原片 / 在线视频 / 英文电影 ---------- */
 function isYouTubeTalk(){ return TALK && String(TALK.id).indexOf("yt_")===0; }
+function isMovieTalk(){ return TALK && TALK.id==="movie"; }
+function clearMedia(){
+  clearListenTimer();
+  if(ytPlayer && ytPlayer.pauseVideo){ try{ ytPlayer.pauseVideo(); }catch(e){} }
+  const el=document.getElementById("ytmount"); if(el){ el.classList.add("hidden"); }
+  $("video").style.display="none"; $("video").removeAttribute("src");
+}
 function setMode(m){
   mode=m;
   $("modeLocal").classList.toggle("active", m==="local");
   $("modeOnline").classList.toggle("active", m==="online");
+  $("modeMovie").classList.toggle("active", m==="movie");
   $("localCtl").classList.toggle("hidden", m!=="local");
   $("onlineCtl").classList.toggle("hidden", m!=="online");
+  $("movieCtl").classList.toggle("hidden", m!=="movie");
   if(m==="local"){
-    ytStatus("");
-    if(!TALK || isYouTubeTalk()){
+    ytStatus(""); movieStatus("");
+    if(!TALK || isYouTubeTalk() || isMovieTalk()){
       if((window.TALKS||[]).length) onTalkChange();      // 回到本地演讲
     }else{
       setMediaLocal(mediaUrl(TALK.folder, TALK.video));   // 已是本地演讲，恢复原片
     }
-  }else{ // online
+  }else if(m==="online"){
     if(!isYouTubeTalk()){
-      clearListenTimer();
-      if(ytPlayer && ytPlayer.pauseVideo){ try{ ytPlayer.pauseVideo(); }catch(e){} }
-      const el=document.getElementById("ytmount"); if(el){ el.classList.add("hidden"); }
-      $("video").style.display="none"; $("video").removeAttribute("src");
+      clearMedia();
       const tip=$("mediaTip");
       if(tip){ tip.style.display=""; tip.innerHTML="🌐 粘贴 YouTube 链接 → 点「载入」即可站内播放并跟读。" + (LOCAL_SERVER ? "本机会自动抓取英文字幕。" : "在线版请用「手动字幕」粘贴英文字幕。"); }
       ytStatus(LOCAL_SERVER ? "" : "提示：在线测试版无法自动抓字幕，载入视频后点「手动字幕」粘贴英文即可。");
+    }
+  }else if(m==="movie"){
+    ytStatus("");
+    if(isMovieTalk()){ if(movieVideoUrl) setMediaMovie(movieVideoUrl); }
+    else if(movieSentences && movieSentences.length){ startMovieTalk(); }   // 恢复上次电影
+    else {
+      clearMedia();
+      const tip=$("mediaTip");
+      if(tip){ tip.style.display=""; tip.innerHTML="🎬 用英文电影学：点上方「📹 上传视频」选电影文件 + 「📝 上传字幕」(.srt/.vtt)，或点「链接 / 粘贴字幕」。字幕带时间轴即可逐句听原声。"; }
     }
   }
 }
@@ -493,15 +601,23 @@ function init(){
   $("subEn").onclick=()=>setSub("en");
   $("errBtn").onclick=openErr;
   $("closeErr").onclick=closeErr;
-  $("mask").onclick=()=>{ closeErr(); closeYt(); };
+  $("mask").onclick=()=>{ closeErr(); closeYt(); closeMovie(); };
   $("exportBtn").onclick=exportErr;
   $("modeLocal").onclick=()=>setMode("local");
   $("modeOnline").onclick=()=>setMode("online");
+  $("modeMovie").onclick=()=>setMode("movie");
   $("ytManualOpen").onclick=openYt;
   $("closeYt").onclick=closeYt;
   $("ytLoadBtn").onclick=ytLoad;
   $("ytManualBtn").onclick=ytManual;
   $("ytUrl").onkeydown=(e)=>{ if(e.key==="Enter") ytLoad(); };
+  // 英文电影
+  $("movieVideo").onchange=(e)=>onMovieVideoFile(e.target.files && e.target.files[0]);
+  $("movieSub").onchange=(e)=>onMovieSubFile(e.target.files && e.target.files[0]);
+  $("movieMoreBtn").onclick=openMovie;
+  $("closeMovie").onclick=closeMovie;
+  $("movieUrlBtn").onclick=loadMovieUrl;
+  $("movieSubTextBtn").onclick=applyMovieSubText;
 
   if((window.TALKS||[]).length) onTalkChange();
   else setStatus("还没有演讲数据，请先运行 tools\\build-talk.ps1 生成。");

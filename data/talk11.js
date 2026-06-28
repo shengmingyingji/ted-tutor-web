@@ -89,707 +89,848 @@ window.TALK_DATA = {
                       {
                           "i":  0,
                           "en":  "In 1985, when at age 22, I became the world chess champion after beating Anatoly Karpov.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  0
                       },
                       {
                           "i":  1,
                           "en":  "Earlier that year, I played what is called simultaneous exhibition, against 32 of the",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  10.32
                       },
                       {
                           "i":  2,
                           "en":  "world\u0027s best chess playing machines in Hamburg, Germany.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  17.52
                       },
                       {
                           "i":  3,
                           "en":  "I won all the games, and then it was not considered much of a surprise that I could beat 32",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  22.04
                       },
                       {
                           "i":  4,
                           "en":  "computers at the same time.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  29.62
                       },
                       {
                           "i":  5,
                           "en":  "To me, that was the gold mage.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  32.4
                       },
                       {
                           "i":  6,
                           "en":  "Machines were weak, and my hair was strong.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  37.2
                       },
                       {
                           "i":  7,
                           "en":  "Just 12 years later, I was fighting for my life against just one computer.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  44.42
                       },
                       {
                           "i":  8,
                           "en":  "In a match, called by the cover of Newsweek, the brain\u0027s last stand.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  50.62
                       },
                       {
                           "i":  9,
                           "en":  "No pressure.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  57.14
                       },
                       {
                           "i":  10,
                           "en":  "From mythology to science fiction, human versus machine has been often portrayed as a matter",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  60.56
                       },
                       {
                           "i":  11,
                           "en":  "of life and death.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  67.98
                       },
                       {
                           "i":  12,
                           "en":  "John Henry, called the still driving man in the 19th century African-American folk legend,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  69.84
                       },
                       {
                           "i":  13,
                           "en":  "was pitted in the race against steam-powered hammer bashing a tunnel through mountain rock.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  76.3
                       },
                       {
                           "i":  14,
                           "en":  "John Henry\u0027s legend is a part of a long historical narrative, pitting humanity versus",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  84.65
                       },
                       {
                           "i":  15,
                           "en":  "technology.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  91.84
                       },
                       {
                           "i":  16,
                           "en":  "And this, compared to the rhetoric, is standard now, wearing a race against the machines in",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  94.16
                       },
                       {
                           "i":  17,
                           "en":  "the fight or even in the war.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  101.62
                       },
                       {
                           "i":  18,
                           "en":  "Jobs are being killed off, people are being replaced as either advantage from the earth.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  105.4
                       },
                       {
                           "i":  19,
                           "en":  "It\u0027s enough to think that the movies like The Terminator or The Matrix are nonfiction.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  110.94
                       },
                       {
                           "i":  20,
                           "en":  "There are very few instances of an arena where the human body and mind can compete on equal",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  119.28
                       },
                       {
                           "i":  21,
                           "en":  "terms with a computer or a robot.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  128.76
                       },
                       {
                           "i":  22,
                           "en":  "Actually, I wish there were a few more.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  131.04
                       },
                       {
                           "i":  23,
                           "en":  "Instead, it was my blessing and my curse to literally become the proverbial man in the",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  137.76
                       },
                       {
                           "i":  24,
                           "en":  "man versus machine competition that everybody is still talking about.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  146.44
                       },
                       {
                           "i":  25,
                           "en":  "In the most famous human-machine competition since John Henry, I played two matches against",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  153.14
                       },
                       {
                           "i":  26,
                           "en":  "the IBM supercomputer, the Blue.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  166.08
                       },
                       {
                           "i":  27,
                           "en":  "Nobody remembers that I won the first match.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  175.88
                       },
                       {
                           "i":  28,
                           "en":  "In Philadelphia, before losing the rematch, the following year in New York.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  178.06
                       },
                       {
                           "i":  29,
                           "en":  "But I guess that\u0027s fair.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  185.54
                       },
                       {
                           "i":  30,
                           "en":  "There is no stay in history, special calendar entry for all the people who failed to climb",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  187.44
                       },
                       {
                           "i":  31,
                           "en":  "Mount Everest before Sir Edmund Hillary and 10\u0027s ignore game made it to the top.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  193.8
                       },
                       {
                           "i":  32,
                           "en":  "And in 1997, I was still the world champion when chess computers finally came of age.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  203.3
                       },
                       {
                           "i":  33,
                           "en":  "I was Mount Everest and the blue reached the summit.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  212.72
                       },
                       {
                           "i":  34,
                           "en":  "I should say, of course, not that the blue did it.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  215.96
                       },
                       {
                           "i":  35,
                           "en":  "But its human creators announced that our mom, Kimball, Hoan, Sue, had soft to them.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  222.82
                       },
                       {
                           "i":  36,
                           "en":  "As always, machine strength was a human trial.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  231.26
                       },
                       {
                           "i":  37,
                           "en":  "Something we tend to forget when humans are surpassed by our own creations.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  236.54
                       },
                       {
                           "i":  38,
                           "en":  "The blue was victorious.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  245.1
                       },
                       {
                           "i":  39,
                           "en":  "That wasn\u0027t intelligent, no, no, it wasn\u0027t.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  246.22
                       },
                       {
                           "i":  40,
                           "en":  "At least not in the way Alan Turing and other founders of computer science had hoped.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  249.52
                       },
                       {
                           "i":  41,
                           "en":  "It turned that chess could be crunched by brute force once hardware got fast enough and algorithms",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  259.58
                       },
                       {
                           "i":  42,
                           "en":  "got smart enough.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  271.84
                       },
                       {
                           "i":  43,
                           "en":  "Although by the definition of the output, Grandmaster level chess, the blue wasn\u0027t intelligent.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  272.26
                       },
                       {
                           "i":  44,
                           "en":  "But even at the incredible speed, 200 million positions per second, the blue\u0027s method provided",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  292.98
                       },
                       {
                           "i":  45,
                           "en":  "little of the dreamt of insight into the mysteries of human intelligence.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  302.44
                       },
                       {
                           "i":  46,
                           "en":  "Soon, machines will be tax drivers and doctors and professors, but will they be intelligent?",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  310.76
                       },
                       {
                           "i":  47,
                           "en":  "I would rather leave these definitions to the philosophers and the dictionary.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  324.3
                       },
                       {
                           "i":  48,
                           "en":  "What does really matter is how we human feel about living and working with these machines.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  329.96
                       },
                       {
                           "i":  49,
                           "en":  "When I first met the blue in 1996 in February, I had been the world champion for more than",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  338.28
                       },
                       {
                           "i":  50,
                           "en":  "10 years, and I played 182 world championship games and hundreds of games against other",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  348.5
                       },
                       {
                           "i":  51,
                           "en":  "top players in other competitions.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  357.48
                       },
                       {
                           "i":  52,
                           "en":  "I knew what to expect from my opponents and what to expect from myself.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  360.1
                       },
                       {
                           "i":  53,
                           "en":  "I was used to measure their moves and to gauge their emotional state by watching their",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  370.62
                       },
                       {
                           "i":  54,
                           "en":  "body language and looking at their eyes.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  381.82
                       },
                       {
                           "i":  55,
                           "en":  "And then I sat across the chessboard from the blue.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  387.56
                       },
                       {
                           "i":  56,
                           "en":  "I immediately sensed something new, something unsettling.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  395.48
                       },
                       {
                           "i":  57,
                           "en":  "You might experience a similar feeling, the first time you ride and drive this car, or",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  400.4
                       },
                       {
                           "i":  58,
                           "en":  "the first time your new competitor manager issues an audit work.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  407.02
                       },
                       {
                           "i":  59,
                           "en":  "But when I sat at that first game, I couldn\u0027t be sure what is this thing capable of.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  413
                       },
                       {
                           "i":  60,
                           "en":  "Technology can advance in leaps and IBM had invested heavily.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  423.72
                       },
                       {
                           "i":  61,
                           "en":  "I lost that game, and I couldn\u0027t have wondering, might it be invincible?",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  431.66
                       },
                       {
                           "i":  62,
                           "en":  "Was my beloved game of just over?",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  439.4
                       },
                       {
                           "i":  63,
                           "en":  "These were human doubts, human fears, and the only thing I knew for sure, that my opponent",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  443.1
                       },
                       {
                           "i":  64,
                           "en":  "the blue had no such worries at all.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  449.5
                       },
                       {
                           "i":  65,
                           "en":  "I fought back after this devastating blow to win the first match, but the writing was on",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  456.66
                       },
                       {
                           "i":  66,
                           "en":  "the wall.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  467.22
                       },
                       {
                           "i":  67,
                           "en":  "I eventually lost to the machine, but I didn\u0027t suffer the fate of John Henry who won, but",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  468.68
                       },
                       {
                           "i":  68,
                           "en":  "died with his hammer in his hand.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  477.9
                       },
                       {
                           "i":  69,
                           "en":  "It turns that the world of chess still wanted to have a human chess champion.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  480.84
                       },
                       {
                           "i":  70,
                           "en":  "And even today, when a free chess app on the latest mobile phone is stronger than the blue,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  485.68
                       },
                       {
                           "i":  71,
                           "en":  "people are still playing chess, even more than ever before.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  493.22
                       },
                       {
                           "i":  72,
                           "en":  "Doom says, predicted that nobody would touch the game that could be conquered by the machine,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  499.96
                       },
                       {
                           "i":  73,
                           "en":  "and they were wrong, proven wrong.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  505.88
                       },
                       {
                           "i":  74,
                           "en":  "What Doom is saying has always been a popular pastime when it comes to technology.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  508.04
                       },
                       {
                           "i":  75,
                           "en":  "I learned from my own experience is that we must face our fears if we want to get the most",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  519.38
                       },
                       {
                           "i":  76,
                           "en":  "out of our technology, and we must conquer those fears if we want to get the best out of",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  528.58
                       },
                       {
                           "i":  77,
                           "en":  "our humanity.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  536.94
                       },
                       {
                           "i":  78,
                           "en":  "By leaking my wounds, I would love inspiration from my battles against the blue.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  538.94
                       },
                       {
                           "i":  79,
                           "en":  "As all Russians saying goes, you can\u0027t beat them, join them.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  545.72
                       },
                       {
                           "i":  80,
                           "en":  "And I thought, what if I could play with a computer, together with a computer at my",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  553.04
                       },
                       {
                           "i":  81,
                           "en":  "side, combining our strengths?",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  561.58
                       },
                       {
                           "i":  82,
                           "en":  "Human intuition plus machine calculation, human strategy, machine tactic, human experience,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  567.6
                       },
                       {
                           "i":  83,
                           "en":  "machine\u0027s memory, couldn\u0027t be the perfect game ever played.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  574.56
                       },
                       {
                           "i":  84,
                           "en":  "My idea came to life in 1998, on the name of advanced chess, when I played this human",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  579
                       },
                       {
                           "i":  85,
                           "en":  "class machine competition against another elite player.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  590.18
                       },
                       {
                           "i":  86,
                           "en":  "But in this first experiment, we both failed to combine human and machine skills effectively.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  594.38
                       },
                       {
                           "i":  87,
                           "en":  "Chess found his home on the internet, and in 2005, a so-called free-style chess tournament",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  603.22
                       },
                       {
                           "i":  88,
                           "en":  "produced a revelation, team of grandmasters and top machines participated.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  614.18
                       },
                       {
                           "i":  89,
                           "en":  "But the winners were not grandmasters, not a supercomputer.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  620.66
                       },
                       {
                           "i":  90,
                           "en":  "The winners were a pair of amateur American chess players operating three ordinary PCs",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  626.16
                       },
                       {
                           "i":  91,
                           "en":  "at the same time.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  632.92
                       },
                       {
                           "i":  92,
                           "en":  "The skill of coaching their machines effectively counteracted the superior chess knowledge",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  633.8
                       },
                       {
                           "i":  93,
                           "en":  "of their grandmaster opponents and much greater computational power of others.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  645.24
                       },
                       {
                           "i":  94,
                           "en":  "And I read this formulation.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  651.32
                       },
                       {
                           "i":  95,
                           "en":  "A weak human player, plus a machine, plus a better process, is superior to a very powerful",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  656.64
                       },
                       {
                           "i":  96,
                           "en":  "machine alone, but more remarkably, is superior to a strong human player, plus machine,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  666.14
                       },
                       {
                           "i":  97,
                           "en":  "and an inferior process.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  672.24
                       },
                       {
                           "i":  98,
                           "en":  "This convinced me that we would need better interfaces to help us coach our machines towards",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  673.94
                       },
                       {
                           "i":  99,
                           "en":  "more useful intelligence.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  679.64
                       },
                       {
                           "i":  100,
                           "en":  "Human plus machine isn\u0027t the future.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  681.26
                       },
                       {
                           "i":  101,
                           "en":  "This present, everybody has used online translation to get the gist of a news article",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  685.4
                       },
                       {
                           "i":  102,
                           "en":  "from a foreign newspaper, knowing it\u0027s far from perfect.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  697.4
                       },
                       {
                           "i":  103,
                           "en":  "Then we use our human experience to make sense out of that, and then machine learns from our",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  701.8
                       },
                       {
                           "i":  104,
                           "en":  "corrections.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  713
                       },
                       {
                           "i":  105,
                           "en":  "This model is spreading in investing medical diagnosis, security analysis.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  713.68
                       },
                       {
                           "i":  106,
                           "en":  "The machine crunches data, calculates probabilities, gets 80% of the way, 90%, making it easier",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  721.16
                       },
                       {
                           "i":  107,
                           "en":  "for analysis and decision-making of the human part.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  733.88
                       },
                       {
                           "i":  108,
                           "en":  "But you are not going to send your kids to school in self-driving car with 90% accuracy,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  740.84
                       },
                       {
                           "i":  109,
                           "en":  "even with 99%.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  755.88
                       },
                       {
                           "i":  110,
                           "en":  "So we need leap forward to add a few more crucial decimal places.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  757.08
                       },
                       {
                           "i":  111,
                           "en":  "20 years after my match with the blue second match, this sensational, the brain\u0027s last",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  762.36
                       },
                       {
                           "i":  112,
                           "en":  "stand headline has become commonplace as intelligent machines move in every sector, seemingly",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  766.12
                       },
                       {
                           "i":  113,
                           "en":  "every day.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  774.02
                       },
                       {
                           "i":  114,
                           "en":  "But unlike in the past, when machines replaced foreign animals, manual labor, now they are",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  774.34
                       },
                       {
                           "i":  115,
                           "en":  "coming after people with college degree and political influence.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  787.84
                       },
                       {
                           "i":  116,
                           "en":  "And as someone who fought machines are lost, I\u0027m here to tell you this is excellent actual",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  797.46
                       },
                       {
                           "i":  117,
                           "en":  "news.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  813.38
                       },
                       {
                           "i":  118,
                           "en":  "Eventually, every profession will have to feel this pressure, or else it will mean humanity",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  813.84
                       },
                       {
                           "i":  119,
                           "en":  "has ceased to make progress.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  832.08
                       },
                       {
                           "i":  120,
                           "en":  "We don\u0027t get to choose when and where technological progress stops.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  844.24
                       },
                       {
                           "i":  121,
                           "en":  "We cannot slow down.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  853.26
                       },
                       {
                           "i":  122,
                           "en":  "In fact, we have to speed up.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  854.54
                       },
                       {
                           "i":  123,
                           "en":  "Our technology excels at removing difficulties and uncertainties from our lives.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  857.4
                       },
                       {
                           "i":  124,
                           "en":  "And so we must seek out ever more difficult, ever more uncertain challenges.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  866.24
                       },
                       {
                           "i":  125,
                           "en":  "Machines have calculations.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  874.16
                       },
                       {
                           "i":  126,
                           "en":  "We have understanding.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  877.44
                       },
                       {
                           "i":  127,
                           "en":  "Machines have instructions.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  878.5
                       },
                       {
                           "i":  128,
                           "en":  "We have purpose.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  879.1
                       },
                       {
                           "i":  129,
                           "en":  "Machines have objectivity.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  882.04
                       },
                       {
                           "i":  130,
                           "en":  "We have passion.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  884.78
                       },
                       {
                           "i":  131,
                           "en":  "We should not worry about what our machines can do today.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  885.74
                       },
                       {
                           "i":  132,
                           "en":  "Instead, we should worry about what they still cannot do today because we will need the help",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  891.3
                       },
                       {
                           "i":  133,
                           "en":  "of the new intelligent machines to turn our grandest dreams into reality.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  891.3
                       },
                       {
                           "i":  134,
                           "en":  "And if we fail, if we fail, it\u0027s not because our machines are too intelligent or not intelligent",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  891.3
                       },
                       {
                           "i":  135,
                           "en":  "enough.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  891.3
                       },
                       {
                           "i":  136,
                           "en":  "If we fail, it\u0027s because we grew complacent and limited our ambitions.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  891.3
                       },
                       {
                           "i":  137,
                           "en":  "Our humanity is not defined by any skill, like swinging a hammer or even playing chess.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  891.3
                       },
                       {
                           "i":  138,
                           "en":  "There\u0027s one thing only human can do.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  891.3
                       },
                       {
                           "i":  139,
                           "en":  "That\u0027s dream.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  891.3
                       },
                       {
                           "i":  140,
                           "en":  "So let us dream big, thank you.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  891.3
                       }
                   ]
 };

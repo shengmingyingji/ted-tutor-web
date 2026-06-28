@@ -12,6 +12,7 @@
   <div class="modebar">
     <button id="modeLocal" class="mode active">📁 本地原片</button>
     <button id="modeOnline" class="mode">🌐 在线视频</button>
+    <button id="modeMovie" class="mode">🎬 英文电影</button>
   </div>
   <div class="header-actions">
     <button id="errBtn" class="ghost">错词本 <span id="errCount" class="badge">0</span></button>
@@ -26,6 +27,11 @@
     <input id="ytUrl" class="yt-inline" placeholder="粘贴 YouTube 链接：watch?v=… 或 youtu.be/…">
     <button id="ytLoadBtn" class="yt-inline-btn">载入</button>
     <button id="ytManualOpen" class="ghost">手动字幕</button>
+  </div>
+  <div id="movieCtl" class="ctl hidden">
+    <label class="filebtn">📹 上传视频<input type="file" id="movieVideo" accept="video/*" hidden></label>
+    <label class="filebtn">📝 上传字幕<input type="file" id="movieSub" accept=".srt,.vtt,.ass,.txt" hidden></label>
+    <button id="movieMoreBtn" class="ghost">链接 / 粘贴字幕</button>
   </div>
   <select id="segSelect" title="选择段落"></select>
 </div>
@@ -106,6 +112,23 @@
   <p class="yt-desc">在线版、或自动抓不到字幕时用：先在上方「在线视频」里载入 YouTube 链接播放，再把英文字幕贴到下面开始跟读。<br><span class="dim">每行一句；有中文用 <b>||</b> 分隔，如 <code>Hello||你好</code>。</span></p>
   <textarea id="ytManualText" class="yt-textarea" placeholder="Hello everyone||大家好&#10;Today we talk about AI||今天我们聊聊人工智能&#10;Let us begin||让我们开始"></textarea>
   <button id="ytManualBtn" class="yt-load">用粘贴的字幕开始</button>
+</div>
+
+<!-- 英文电影：链接 / 粘贴字幕 抽屉 -->
+<div id="moviePanel" class="drawer hidden">
+  <div class="drawer-head">
+    <b>🎬 英文电影跟学</b>
+    <button id="closeMovie" class="ghost">关闭</button>
+  </div>
+  <p class="yt-desc">用电影学英语：①上方「上传视频」选本地电影文件（或在此粘贴视频直链）②上传/粘贴对应字幕(.srt/.vtt)。<br><span class="dim">字幕自带时间轴 → 可逐句精准听原声、跟读评分。字幕缺中文时，中英模式会自动翻译。</span></p>
+  <input id="movieUrl" class="yt-inline" placeholder="（可选）粘贴视频直链，如 https://….mp4">
+  <button id="movieUrlBtn" class="yt-load">载入该视频链接</button>
+  <div class="yt-manual">
+    <div class="dim" style="font-size:13px;margin:6px 0">或在此粘贴字幕（支持 .srt/.vtt 内容，或每行一句；有中文用 || 分隔）：</div>
+    <textarea id="movieSubText" class="yt-textarea" placeholder="1&#10;00:00:01,000 --> 00:00:03,000&#10;Are you talking to me?&#10;&#10;2&#10;00:00:03,200 --> 00:00:05,000&#10;I don't see anyone else here."></textarea>
+    <button id="movieSubTextBtn" class="yt-load">用粘贴的字幕开始</button>
+  </div>
+  <div id="movieStatus" class="yt-status"></div>
 </div>
 
 <div id="mask" class="mask hidden"></div>

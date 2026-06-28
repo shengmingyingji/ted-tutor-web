@@ -84,662 +84,794 @@ window.TALK_DATA = {
                       {
                           "i":  0,
                           "en":  "A.I. could add $16 trillion to the global economy in next 10 years.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  1.36
                       },
                       {
                           "i":  1,
                           "en":  "This economy is not going to be built by billions of people or millions of factories,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  8.74
                       },
                       {
                           "i":  2,
                           "en":  "but by computers and algorithms.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  15.6
                       },
                       {
                           "i":  3,
                           "en":  "We have already seen amazing benefits of A.I. in simplifying tasks, in efficiencies, and",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  18.22
                       },
                       {
                           "i":  4,
                           "en":  "improving our lives.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  27.44
                       },
                       {
                           "i":  5,
                           "en":  "However, when it comes to fair and equitable policy decision-making, A.I. has not lived up to its promise.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  30.26
                       },
                       {
                           "i":  6,
                           "en":  "A.I. is becoming a gatekeeper to the economy, deciding who gets a job and who gets an access to a loan.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  38.94
                       },
                       {
                           "i":  7,
                           "en":  "A.I. is only reinforcing and accelerating our bias at speed and scale with societal implications.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  48.64
                       },
                       {
                           "i":  8,
                           "en":  "So, is A.I. failing us?",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  57.68
                       },
                       {
                           "i":  9,
                           "en":  "Are we designing these algorithms to deliver biased and wrong decisions?",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  60.34
                       },
                       {
                           "i":  10,
                           "en":  "As a data scientist, I\u0027m here to tell you it\u0027s not the algorithm, but the biased data that\u0027s",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  66.18
                       },
                       {
                           "i":  11,
                           "en":  "responsible for these decisions.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  73.98
                       },
                       {
                           "i":  12,
                           "en":  "To make A.I. possible for humanity and society, we need a",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  76.36
                       },
                       {
                           "i":  13,
                           "en":  "urgently set.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  82.94
                       },
                       {
                           "i":  14,
                           "en":  "Instead of algorithms, we need to focus on the data.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  83.38
                       },
                       {
                           "i":  15,
                           "en":  "We\u0027re spending time and money",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  87.08
                       },
                       {
                           "i":  16,
                           "en":  "to scale A.I. at the expense of designing and collecting high quality and contextual data.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  88.46
                       },
                       {
                           "i":  17,
                           "en":  "We need to stop the data or the biased data that we already have and focus on three things.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  96.66
                       },
                       {
                           "i":  18,
                           "en":  "Data infrastructure, data quality, and data literacy.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  106.3
                       },
                       {
                           "i":  19,
                           "en":  "In June of this year, we saw embarrassing",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  109.76
                       },
                       {
                           "i":  20,
                           "en":  "bias in the Duke University A.I. model called Pulse, which enhanced a blurry image into a",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  113.9
                       },
                       {
                           "i":  21,
                           "en":  "recognizable photograph of a person.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  123.98
                       },
                       {
                           "i":  22,
                           "en":  "This algorithm incorrectly enhanced a non-white image into a",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  126.92
                       },
                       {
                           "i":  23,
                           "en":  "Caucasian image.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  132.56
                       },
                       {
                           "i":  24,
                           "en":  "African-American images were underrepresented in the training set, leading to",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  133.12
                       },
                       {
                           "i":  25,
                           "en":  "wrong decisions and predictions.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  138.82
                       },
                       {
                           "i":  26,
                           "en":  "Probably this is not the first time you have seen an A.I.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  140
                       },
                       {
                           "i":  27,
                           "en":  "misidentified a black person\u0027s image.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  148.76
                       },
                       {
                           "i":  28,
                           "en":  "Despite an improved A.I. methodology,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  150.78
                       },
                       {
                           "i":  29,
                           "en":  "the underrepresentation of racial and ethnic population still left us with a biased results.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  152.72
                       },
                       {
                           "i":  30,
                           "en":  "This research is academic.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  161.02
                       },
                       {
                           "i":  31,
                           "en":  "However, not all data biases are academic.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  163.54
                       },
                       {
                           "i":  32,
                           "en":  "Biases have real consequences.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  167.14
                       },
                       {
                           "i":  33,
                           "en":  "Take the 2020 U.S.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  168.92
                       },
                       {
                           "i":  34,
                           "en":  "Census.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  172.94
                       },
                       {
                           "i":  35,
                           "en":  "The Census is the foundation for many social and economic policy",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  176.18
                       },
                       {
                           "i":  36,
                           "en":  "decisions.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  181.66
                       },
                       {
                           "i":  37,
                           "en":  "Therefore, the Census is required to count 100% of the population in the United States.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  181.8
                       },
                       {
                           "i":  38,
                           "en":  "However, with the pandemic and the politics of the citizenship question,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  188.98
                       },
                       {
                           "i":  39,
                           "en":  "under counting on minorities is a real possibility.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  197.78
                       },
                       {
                           "i":  40,
                           "en":  "I expect significant under counting of minority",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  201.78
                       },
                       {
                           "i":  41,
                           "en":  "groups who are hard to locate, contact, persuade, and interview for the Census.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  204.94
                       },
                       {
                           "i":  42,
                           "en":  "Under counting, we\u0027ll introduce bias and erode the quality of our data infrastructure.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  211.1
                       },
                       {
                           "i":  43,
                           "en":  "Let\u0027s look at undercounts in 2010 Census.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  218
                       },
                       {
                           "i":  44,
                           "en":  "16 million people were omitted in the final counts.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  221.32
                       },
                       {
                           "i":  45,
                           "en":  "This is as large as the total population of Arizona, Arkansas, Oklahoma, and Iowa put together",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  224.18
                       },
                       {
                           "i":  46,
                           "en":  "for that year.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  231.96
                       },
                       {
                           "i":  47,
                           "en":  "We have also seen about a million kids under age of 500 counted in 2010 Census.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  234
                       },
                       {
                           "i":  48,
                           "en":  "Now, under counting of minorities is common in other national census.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  240.88
                       },
                       {
                           "i":  49,
                           "en":  "As minorities can be",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  248.32
                       },
                       {
                           "i":  50,
                           "en":  "harder to reach, their mistress towards the government or the living area under political unrest.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  250.1
                       },
                       {
                           "i":  51,
                           "en":  "For example, the Australian Census in 2016 undercounted Aboriginal and Torres",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  258.86
                       },
                       {
                           "i":  52,
                           "en":  "state population by about 17.5%.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  264.8
                       },
                       {
                           "i":  53,
                           "en":  "We estimate under counting in 2020 to be much higher than 2010",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  266.86
                       },
                       {
                           "i":  54,
                           "en":  "and the implications of this bias can be massive.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  276.58
                       },
                       {
                           "i":  55,
                           "en":  "Let\u0027s look at the implications of the Census data.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  282.14
                       },
                       {
                           "i":  56,
                           "en":  "Census is the most trusted, open, and publicly available rich data on population composition",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  286.84
                       },
                       {
                           "i":  57,
                           "en":  "and characteristics.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  294.68
                       },
                       {
                           "i":  58,
                           "en":  "While businesses have proprietary information on consumers,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  295.74
                       },
                       {
                           "i":  59,
                           "en":  "the Census Bureau reports definitive public counts on age, gender, ethnicity,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  299.34
                       },
                       {
                           "i":  60,
                           "en":  "race, employment, family status, as well as geographic distribution, which are foundation",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  306.48
                       },
                       {
                           "i":  61,
                           "en":  "of the population data infrastructure.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  312.1
                       },
                       {
                           "i":  62,
                           "en":  "When minorities are undercounted, AI models supporting",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  314.12
                       },
                       {
                           "i":  63,
                           "en":  "public transportation, housing, healthcare, insurance are likely to overlook the communities",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  317.22
                       },
                       {
                           "i":  64,
                           "en":  "that require these services the most.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  323.08
                       },
                       {
                           "i":  65,
                           "en":  "First step to improving results is to make that database",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  324.84
                       },
                       {
                           "i":  66,
                           "en":  "representative of age, gender, ethnicity, and race persons as data.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  331.16
                       },
                       {
                           "i":  67,
                           "en":  "Since Census is so important,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  335.8
                       },
                       {
                           "i":  68,
                           "en":  "we have to make every effort to count 100%.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  337.66
                       },
                       {
                           "i":  69,
                           "en":  "Investing in this data quality and accuracy is",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  341.68
                       },
                       {
                           "i":  70,
                           "en":  "essential to making AI possible, not for only few and privileged, but for everyone in the society.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  344.76
                       },
                       {
                           "i":  71,
                           "en":  "Most AI systems use the data that\u0027s already available or collected for some other purposes,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  353.08
                       },
                       {
                           "i":  72,
                           "en":  "because it\u0027s convenient and cheap.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  360.68
                       },
                       {
                           "i":  73,
                           "en":  "Yet data quality is a discipline that requires commitment,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  363.08
                       },
                       {
                           "i":  74,
                           "en":  "real commitment.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  367.96
                       },
                       {
                           "i":  75,
                           "en":  "This attention to the definition, data collection, and measurement of the bias",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  368.38
                       },
                       {
                           "i":  76,
                           "en":  "is not only underappreciated, in the world of speed, scale, and convenience is often ignored.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  372.08
                       },
                       {
                           "i":  77,
                           "en":  "As part of Nielsen Data Science team, I went to fill a visit to collect data,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  378.78
                       },
                       {
                           "i":  78,
                           "en":  "visiting retail stores outside Shanghai and Bangalore.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  385.16
                       },
                       {
                           "i":  79,
                           "en":  "The goal of that visit was to measure",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  389.28
                       },
                       {
                           "i":  80,
                           "en":  "retail sales from those stores.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  391.92
                       },
                       {
                           "i":  81,
                           "en":  "We drove miles outside the city, found these small stores,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  394.36
                       },
                       {
                           "i":  82,
                           "en":  "informal, hard to reach.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  397.02
                       },
                       {
                           "i":  83,
                           "en":  "And you may be wondering, why are we interested in these specific stores?",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  401.64
                       },
                       {
                           "i":  84,
                           "en":  "We could have selected a store in the city where the electronic data could be easily integrated",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  407.16
                       },
                       {
                           "i":  85,
                           "en":  "into a data pipeline, cheap, convenient, and easy.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  415.38
                       },
                       {
                           "i":  86,
                           "en":  "Why are we so obsessed with the quality and",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  421.56
                       },
                       {
                           "i":  87,
                           "en":  "accuracy of the data from these stores?",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  426.4
                       },
                       {
                           "i":  88,
                           "en":  "The answer is simple, because the data from these",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  429.52
                       },
                       {
                           "i":  89,
                           "en":  "rural stores matter.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  436.34
                       },
                       {
                           "i":  90,
                           "en":  "According to international labor organization, 40% Chinese and 65% of Indians",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  438.32
                       },
                       {
                           "i":  91,
                           "en":  "live in the rural areas.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  445.18
                       },
                       {
                           "i":  92,
                           "en":  "Imagine the bias in decision when 65% of consumption in India is",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  447.6
                       },
                       {
                           "i":  93,
                           "en":  "excluded in models, meaning the decision will favor the urban over the rural.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  454.16
                       },
                       {
                           "i":  94,
                           "en":  "Without this rural urban context and signals on livelihood, lifestyle, economy, and values,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  460.58
                       },
                       {
                           "i":  95,
                           "en":  "retail brands will make wrong investments on pricing, advertising, and marketing.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  465.8
                       },
                       {
                           "i":  96,
                           "en":  "Or the urban bias will lead to wrong rural policy decisions, with regards to health and other",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  471.12
                       },
                       {
                           "i":  97,
                           "en":  "investments.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  479.72
                       },
                       {
                           "i":  98,
                           "en":  "Wrong decisions are not the problem with the AI algorithm.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  479.98
                       },
                       {
                           "i":  99,
                           "en":  "It\u0027s a problem of the data",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  484.54
                       },
                       {
                           "i":  100,
                           "en":  "that excludes area intent to measure in the first place.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  486.54
                       },
                       {
                           "i":  101,
                           "en":  "The data in the context is a priority,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  490.64
                       },
                       {
                           "i":  102,
                           "en":  "not the algorithms.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  494.34
                       },
                       {
                           "i":  103,
                           "en":  "Let\u0027s look at another example.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  495.34
                       },
                       {
                           "i":  104,
                           "en":  "I visited this remote trailer park home in Oregon",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  496.76
                       },
                       {
                           "i":  105,
                           "en":  "State and New York City Apartments to invite these homes to participate in Nielsen panels.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  500.7
                       },
                       {
                           "i":  106,
                           "en":  "Panels are statistically representative sample of homes that we invite to participate in the",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  507.52
                       },
                       {
                           "i":  107,
                           "en":  "measurement over a period of time.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  515.98
                       },
                       {
                           "i":  108,
                           "en":  "Our mission to include everybody in the measurement",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  518.3
                       },
                       {
                           "i":  109,
                           "en":  "led us to collect data from this Hispanic and African homes who use over the air TV reception",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  522.5
                       },
                       {
                           "i":  110,
                           "en":  "to an antenna.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  532
                       },
                       {
                           "i":  111,
                           "en":  "Per Nielsen data, these homes constitute 15% of US households,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  534.3
                       },
                       {
                           "i":  112,
                           "en":  "which is about 45 million people.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  537.14
                       },
                       {
                           "i":  113,
                           "en":  "Commitment and focus on quality means we made every effort",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  539.38
                       },
                       {
                           "i":  114,
                           "en":  "to collect information from these 15% hard to reach groups.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  546.32
                       },
                       {
                           "i":  115,
                           "en":  "Why does it matter?",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  549.3
                       },
                       {
                           "i":  116,
                           "en":  "This is a sizable group that\u0027s very, very important to the marketers, brands,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  550.54
                       },
                       {
                           "i":  117,
                           "en":  "as well as the media companies.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  557.3
                       },
                       {
                           "i":  118,
                           "en":  "Without the data, the marketers and brand and their models",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  560.1
                       },
                       {
                           "i":  119,
                           "en":  "would not be able to reach these folks as well as show ads to these very, very important minority",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  565.5
                       },
                       {
                           "i":  120,
                           "en":  "populations.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  575.06
                       },
                       {
                           "i":  121,
                           "en":  "Without the ad revenue, the broadcasters such as Telemundo or Univision",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  575.46
                       },
                       {
                           "i":  122,
                           "en":  "would not be able to deliver free content, including news media, which is so foundational to our",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  580.7
                       },
                       {
                           "i":  123,
                           "en":  "democracy.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  589.76
                       },
                       {
                           "i":  124,
                           "en":  "This data is essential for businesses and society.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  590
                       },
                       {
                           "i":  125,
                           "en":  "Our once in lifetime opportunity to",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  592.4
                       },
                       {
                           "i":  126,
                           "en":  "reduce human bias in AI starts with the data.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  592.4
                       },
                       {
                           "i":  127,
                           "en":  "Instead of racing to build new algorithms,",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  592.4
                       },
                       {
                           "i":  128,
                           "en":  "my mission is to build a better data infrastructure that makes ethical AI possible.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  592.4
                       },
                       {
                           "i":  129,
                           "en":  "I hope you will",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  592.4
                       },
                       {
                           "i":  130,
                           "en":  "join me in my mission as well.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  592.4
                       },
                       {
                           "i":  131,
                           "en":  "Thank you.",
-                          "zh":  ""
+                          "zh":  "",
+                          "t":  592.4
                       }
                   ]
 };
