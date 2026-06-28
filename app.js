@@ -368,7 +368,7 @@ function setMediaLocal(url){
   clearListenTimer();
   if(ytPlayer && ytPlayer.pauseVideo){ try{ ytPlayer.pauseVideo(); }catch(e){} }
   const el=document.getElementById("ytmount"); if(el){ el.classList.add("hidden"); }
-  const v=$("video"); const tip=$("mediaTip");
+  const v=$("video"); v.onerror=null; const tip=$("mediaTip");
   if(LOCAL_SERVER){
     v.style.display=""; v.src=url; try{ v.playbackRate=speed; }catch(e){}
     if(tip){ tip.style.display=""; tip.textContent="▶️ 整体看一遍后逐句跟读。点「听原声」播放原视频，拖动进度条可定位本句。"; }
@@ -490,6 +490,7 @@ function setMediaMovie(url){
   if(ytPlayer && ytPlayer.pauseVideo){ try{ ytPlayer.pauseVideo(); }catch(e){} }
   const el=document.getElementById("ytmount"); if(el){ el.classList.add("hidden"); }
   const v=$("video"); v.style.display=""; v.src=url; try{ v.playbackRate=speed; }catch(e){}
+  v.onerror=()=>{ if(mode==="movie") movieStatus("⚠️ 视频无法播放：可能不是直接视频文件、或跨域受限。请改用「📹 上传视频」选本地文件。"); };
   const tip=$("mediaTip"); if(tip){ tip.style.display=""; tip.textContent="🎬 电影已载入。点「听原声」播放当前句的原声，拖动进度条可定位。"; }
 }
 function startMovieTalk(){
@@ -527,11 +528,22 @@ function applyMovieSubText(){
 }
 function loadMovieUrl(){
   const url=$("movieUrl").value.trim();
-  if(!url){ movieStatus("请粘贴视频直链。"); return; }
+  if(!url){ movieStatus("请粘贴视频链接。"); return; }
+  // YouTube 链接不能用 <video> 播放 → 自动切到「在线视频」模式载入
+  const ytid=parseYouTubeId(url);
+  if(ytid){
+    movieStatus("检测到 YouTube 链接，已切到「🌐 在线视频」模式载入（那里用 YouTube 播放器，可自动抓字幕或手动粘贴）。");
+    closeMovie(); setMode("online"); $("ytUrl").value=url; ytLoad();
+    return;
+  }
+  // 直链需是“直接视频文件”(.mp4/.webm…)；网页/播放页地址放不进 <video>
+  const looksDirect=/\.(mp4|webm|ogg|ogv|m4v|mov)(\?|#|$)/i.test(url);
   movieVideoUrl=url; movieTitle="英文电影";
   setMode("movie"); setMediaMovie(url);
   if(movieSentences && movieSentences.length){ startMovieTalk(); }
-  movieStatus("✅ 视频链接已载入。" + ((movieSentences&&movieSentences.length)?"":"请再粘贴/上传字幕。"));
+  const head=looksDirect ? "✅ 视频链接已载入。" : "⚠️ 这不像视频直链(应以 .mp4/.webm 结尾)，已尝试载入；普通网页/视频站请用「上传视频」或「在线视频」。";
+  const tail=(movieSentences&&movieSentences.length) ? "" : "请再粘贴/上传字幕。";
+  movieStatus(head+tail);
 }
 function openMovie(){ $("moviePanel").classList.remove("hidden"); $("mask").classList.remove("hidden"); }
 function closeMovie(){ $("moviePanel").classList.add("hidden"); $("mask").classList.add("hidden"); }
@@ -543,7 +555,7 @@ function clearMedia(){
   clearListenTimer();
   if(ytPlayer && ytPlayer.pauseVideo){ try{ ytPlayer.pauseVideo(); }catch(e){} }
   const el=document.getElementById("ytmount"); if(el){ el.classList.add("hidden"); }
-  $("video").style.display="none"; $("video").removeAttribute("src");
+  const v=$("video"); v.onerror=null; v.style.display="none"; v.removeAttribute("src");
 }
 function setMode(m){
   mode=m;
