@@ -52,6 +52,7 @@
       <div class="card-top">
         <span class="sent-index" id="sentIndex">#1</span>
         <div class="card-tools">
+          <button id="rpBtn" class="ghost" title="角色扮演配音：轮到你的角色时自动静音，由你说台词">🎭 配音</button>
           <button id="listenBtn" title="听这一句的原声">▶ 听原声</button>
           <select id="speedSel" class="speed" title="播放速度">
             <option value="0.5">0.5x</option>
@@ -81,6 +82,12 @@
         <p class="diff" id="diff"></p>
         <div class="heard">识别到：<span id="heard">—</span></div>
       </div>
+    </div>
+
+    <div id="rpActions" class="rp-actions hidden">
+      <button id="rpHearBtn">🔊 听原声</button>
+      <button id="rpRetryBtn" class="rp-retry">🎤 再试一次</button>
+      <button id="rpGoBtn" class="ghost">▶ 继续播放</button>
     </div>
 
     <div class="controls">
@@ -129,6 +136,17 @@
     <button id="movieSubTextBtn" class="yt-load">用粘贴的字幕开始</button>
   </div>
   <div id="movieStatus" class="yt-status"></div>
+</div>
+
+<!-- 角色扮演配音抽屉 -->
+<div id="rpPanel" class="drawer hidden">
+  <div class="drawer-head">
+    <b>🎭 角色扮演配音</b>
+    <button id="closeRpBtn" class="ghost">关闭</button>
+  </div>
+  <p class="yt-desc">选一个角色扮演：视频连续播放，<b>轮到你的角色说台词时自动静音</b>，由你对着画面配音，说完 AI 自动打分。<br><span class="dim">分数低会自动暂停，可听原声模仿后再试。字幕里 <code>名字: 台词</code> 格式会自动识别角色；没有人名标注时可选「全部台词」。</span></p>
+  <div id="rpRoles" class="rp-roles"></div>
+  <button id="rpStartBtn" class="yt-load">🎬 开始配音</button>
 </div>
 
 <div id="mask" class="mask hidden"></div>

@@ -34,6 +34,15 @@ select{
 .yt-inline-btn{padding:9px 18px; font-size:14px}
 .filebtn{background:var(--blue); color:#fff; border-radius:8px; padding:9px 14px; font-size:14px; cursor:pointer; white-space:nowrap}
 .filebtn:hover{filter:brightness(1.08)}
+
+/* 角色扮演配音 */
+.rp-roles{display:flex; flex-direction:column; gap:8px; margin:14px 0}
+.rp-role{background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:11px 14px; font-size:15px; cursor:pointer; display:flex; align-items:center; gap:10px}
+.rp-role:hover{border-color:var(--blue)}
+.rp-actions{display:flex; gap:12px; background:var(--panel); border:1px solid var(--gold); border-radius:14px; padding:14px}
+.rp-actions button{flex:1; font-size:15px; padding:12px}
+.rp-actions .rp-retry{background:var(--accent); font-weight:700}
+#rpBtn.rp-on{background:var(--accent); color:#fff; border-color:var(--accent)}
 button{
   cursor:pointer; border:none; border-radius:10px; padding:10px 16px;
   font-size:15px; font-family:inherit; background:var(--blue); color:#fff;
