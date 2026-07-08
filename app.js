@@ -385,10 +385,16 @@ function setMediaYouTube(id){
   const v=$("video"); try{ v.pause(); }catch(e){} v.removeAttribute("src"); try{ v.load(); }catch(e){} v.style.display="none";
   const tip=$("mediaTip"); if(tip) tip.style.display="none";
   const el=document.getElementById("ytmount"); if(el){ el.classList.remove("hidden"); }
-  if(ytApiReady && window.YT && window.YT.Player){ createYtPlayer(id); }
+  // 不依赖 onYouTubeIframeAPIReady 回调（若 iframe_api 先于本脚本就绪则回调不会触发），直接检测 YT.Player
+  if(window.YT && window.YT.Player){ createYtPlayer(id); }
   else {
     ytPendingId=id;
-    setTimeout(()=>{ if(ytPendingId===id && !(window.YT && window.YT.Player)){ fallbackIframe(id); ytPendingId=null; } }, 2500);
+    setTimeout(()=>{
+      if(ytPendingId!==id) return;
+      ytPendingId=null;
+      if(window.YT && window.YT.Player) createYtPlayer(id);
+      else fallbackIframe(id);
+    }, 2500);
   }
 }
 function parseYouTubeId(input){
@@ -399,8 +405,14 @@ function parseYouTubeId(input){
   return null;
 }
 function startYouTubeTalk(id, title, rawSentences){
-  const sentences=rawSentences.map((s,i)=>({i, en:(s.en||"").trim(), zh:(s.zh||"").trim(), t:(typeof s.t==="number"? s.t : null)}))
-    .filter(s=>s.en && !/^(Translator|Reviewer|译者|审校)\s*[:：]/i.test(s.en) && !/^\[(Music|Applause|Laughter|音乐|掌声|笑声)\]?/i.test(s.en));
+  const sentences=rawSentences
+    .filter(s=>{ const en=(s.en||"").trim(); return en && !/^(Translator|Reviewer|译者|审校)\s*[:：]/i.test(en) && !/^\[(Music|Applause|Laughter|音乐|掌声|笑声)\]?/i.test(en); })
+    .map((s,i)=>{
+      let en=(s.en||"").trim(), sp=s.sp||"";
+      if(!sp){ const x=extractSpeaker(en); sp=x.sp; en=x.text; }
+      return {i, en, zh:(s.zh||"").trim(), sp, t:(typeof s.t==="number"? s.t : null), end:(typeof s.end==="number"? s.end : null)};
+    })
+    .filter(s=>s.en);
   if(!sentences.length){ ytStatus("没有可用的句子。"); return; }
   sentences.forEach((s,i)=>s.i=i);
   const segs=[]; for(let s=0; s*10<sentences.length; s++){ segs.push({name:"第"+(s+1)+"段", start:s*10, end:Math.min(s*10+9, sentences.length-1)}); }
@@ -433,13 +445,13 @@ async function ytLoad(){
 function ytManual(){
   const raw=$("ytManualText").value.trim();
   if(!raw){ ytStatus("请先在下面粘贴英文字幕。"); return; }
-  let lines=raw.split(/\r?\n+/).map(s=>s.trim()).filter(Boolean);
-  if(lines.length<=1){ lines=raw.replace(/([.!?])\s+/g,"$1\n").split(/\n+/).map(s=>s.trim()).filter(Boolean); }
-  const sentences=lines.map((line)=>{ const p=line.split("||"); return { en:(p[0]||"").trim(), zh:(p[1]||"").trim() }; });
+  const sentences=parseSubtitles(raw);   // 支持 SRT/VTT(带时间轴→可配音/听原声) 或每行一句
+  if(!sentences.length){ ytStatus("字幕解析为空。"); return; }
   const id=parseYouTubeId($("ytUrl").value);
   if(id) setMediaYouTube(id);
   startYouTubeTalk(id||"manual", "YouTube（手动字幕）", sentences);
-  ytStatus("✅ 已用手动字幕开始（"+sentences.length+" 句）。");
+  const hasT=sentences.some(s=>s.t!=null);
+  ytStatus("✅ 已用手动字幕开始（"+sentences.length+" 句"+(hasT?"，带时间轴，支持逐句听原声和🎭配音":"")+"）。");
   setTimeout(closeYt, 600);
 }
 function ytStatus(t){ $("ytStatus").textContent=t||""; }
@@ -579,9 +591,37 @@ function rpEnd(i){
   if(nx && nx.t!=null) return nx.t;
   return (s.t!=null? s.t:0)+6;
 }
-function rpVideoOk(){
+// 媒体适配器：配音统一操作接口（本地/电影 <video> 与 YouTube IFrame 双实现）
+function rpMedia(){
+  if(isYouTubeTalk() && ytPlayer && ytPlayer.seekTo){
+    return {
+      yt:true,
+      time:()=>{ try{ return ytPlayer.getCurrentTime()||0; }catch(e){ return 0; } },
+      seek:(t)=>{ try{ ytPlayer.seekTo(t,true); }catch(e){} },
+      play:()=>{ try{ ytPlayer.playVideo(); }catch(e){} },
+      pause:()=>{ try{ ytPlayer.pauseVideo(); }catch(e){} },
+      mute:(on)=>{ try{ if(on) ytPlayer.mute(); else ytPlayer.unMute(); }catch(e){} },
+      paused:()=>{ try{ return ytPlayer.getPlayerState()!==1; }catch(e){ return true; } },
+      setRate:()=>{ try{ ytPlayer.setPlaybackRate(speed); }catch(e){} }
+    };
+  }
   const v=$("video");
-  return !!(TALK && v.getAttribute("src") && v.style.display!=="none");
+  return {
+    yt:false,
+    time:()=>v.currentTime,
+    seek:(t)=>{ try{ v.currentTime=t; }catch(e){} },
+    play:()=>{ try{ v.play(); }catch(e){} },
+    pause:()=>{ try{ v.pause(); }catch(e){} },
+    mute:(on)=>{ v.muted=on; },
+    paused:()=>v.paused,
+    setRate:()=>{ try{ v.playbackRate=speed; }catch(e){} }
+  };
+}
+function rpMediaOk(){
+  if(!TALK) return false;
+  if(isYouTubeTalk()) return !!(ytPlayer && ytPlayer.seekTo);
+  const v=$("video");
+  return !!(v.getAttribute("src") && v.style.display!=="none");
 }
 function rpSpeakers(){
   const m={};
@@ -590,8 +630,8 @@ function rpSpeakers(){
 }
 function openRp(){
   if(!TALK){ setStatus("请先载入视频和字幕。"); return; }
-  if(!rpVideoOk()){ setStatus("配音模式需要可控视频：请用「本地原片」或「英文电影」（YouTube 暂不支持）。"); return; }
-  if(TALK.sentences.every(s=>s.t==null)){ setStatus("该字幕没有时间轴，无法配音。请用带时间戳的 .srt/.vtt 字幕。"); return; }
+  if(!rpMediaOk()){ setStatus(isYouTubeTalk() ? "YouTube 播放器尚未就绪，稍等几秒再试。" : "配音模式需要视频：请先在「本地原片 / 英文电影 / 在线视频」里载入视频和字幕。"); return; }
+  if(TALK.sentences.every(s=>s.t==null)){ setStatus("该字幕没有时间轴，无法配音。请用带时间戳的 .srt/.vtt 字幕（YouTube 自动抓的字幕自带时间轴）。"); return; }
   const spk=rpSpeakers();
   const list=$("rpRoles"); list.innerHTML="";
   const mk=(val,label,checked)=>{
@@ -613,20 +653,20 @@ function rpStart(){
   rp.role=sel.value; rp.on=true; rp.phase=null; rp.activeIdx=-1;
   closeRp(); rpActionsShow(false);
   const b=$("rpBtn"); b.textContent="⏹ 退出配音"; b.classList.add("rp-on");
-  const v=$("video");
-  v.muted=false; try{ v.playbackRate=speed; }catch(e){}
+  const m=rpMedia();
+  m.mute(false); m.setRate();
   const s=TALK.sentences[cur];
-  if(s && s.t!=null) v.currentTime=Math.max(0, s.t-0.4);
-  v.addEventListener("timeupdate", rpTick);
-  v.play();
+  if(s && s.t!=null) m.seek(Math.max(0, s.t-0.4));
+  if(rp.poll) clearInterval(rp.poll);
+  rp.poll=setInterval(rpTick, 250);   // 轮询推进（video 与 YouTube 通用）
+  m.play();
   setStatus("🎭 配音开始：角色【"+(rp.role==="*"?"全部台词":rp.role)+"】。轮到你的台词时会自动静音，请对着画面开口说！");
 }
 function rpStop(silent){
   if(!rp.on) return;
   rp.on=false; rp.phase=null; rp.activeIdx=-1;
-  const v=$("video");
-  v.removeEventListener("timeupdate", rpTick);
-  v.muted=false;
+  if(rp.poll){ clearInterval(rp.poll); rp.poll=null; }
+  rpMedia().mute(false);
   if(recognizing && recog){ try{ recog.stop(); }catch(e){} }
   rpActionsShow(false);
   const b=$("rpBtn"); b.textContent="🎭 配音"; b.classList.remove("rp-on");
@@ -645,7 +685,7 @@ function rpShowSentence(i){
 }
 function rpTick(){
   if(!rp.on || !TALK) return;
-  const v=$("video"); const tNow=v.currentTime;
+  const m=rpMedia(); const tNow=m.time();
   if(rp.phase==="review" || rp.phase==="hearing" || rp.phase==="scoring") return;
   if(rp.phase==="speaking"){
     if(tNow >= rpEnd(rp.activeIdx)){
@@ -667,7 +707,7 @@ function rpTick(){
   rpShowSentence(idx);
   const s=TALK.sentences[idx];
   if(rpIsMine(s)){
-    v.muted=true;
+    m.mute(true);
     rp.phase="speaking";
     if(recog && !recognizing){
       recognizing=true; recBtnUI(true);
@@ -675,52 +715,52 @@ function rpTick(){
     }
     setStatus("🎤 该你了！大声说出上面的台词…");
   }else{
-    v.muted=false;
+    m.mute(false);
   }
 }
 function rpActionsShow(on){ $("rpActions").classList.toggle("hidden", !on); }
 function rpAfterScore(finalScore){
   if(!rp.on) return;
-  const v=$("video");
+  const m=rpMedia();
   if(finalScore>=75){
-    rp.phase=null; v.muted=false; rpActionsShow(false);
+    rp.phase=null; m.mute(false); rpActionsShow(false);
     setStatus("✅ "+finalScore+" 分，很棒！继续看下去…");
-    if(v.paused) v.play();
+    if(m.paused()) m.play();
   }else{
-    rp.phase="review"; v.pause();
+    rp.phase="review"; m.pause();
     rpActionsShow(true);
     setStatus("😅 "+finalScore+" 分。听听原声怎么说，再模仿一次？");
   }
 }
 function rpNoHeard(){
   if(!rp.on) return;
-  const v=$("video");
-  rp.phase="review"; v.pause(); v.muted=false;
+  const m=rpMedia();
+  rp.phase="review"; m.pause(); m.mute(false);
   rpActionsShow(true);
   setStatus("没听清你的声音。点「听原声」学一遍，或「再试一次」。");
 }
 function rpHear(){
-  const v=$("video"); const s=TALK.sentences[cur];
+  const m=rpMedia(); const s=TALK.sentences[cur];
   if(!s || s.t==null) return;
   rp.phase="hearing";
   clearListenTimer();
-  v.muted=false; v.currentTime=Math.max(0, s.t-0.05); try{ v.playbackRate=speed; }catch(e){}
-  v.play();
+  m.mute(false); m.seek(Math.max(0, s.t-0.05)); m.setRate();
+  m.play();
   const dur=Math.max(0.8, rpEnd(cur)-s.t);
   listenTimer=setTimeout(()=>{
-    try{ v.pause(); }catch(e){}
+    m.pause();
     rp.phase="review";
     setStatus("听完了。点「🎤 再试一次」模仿它，或「▶ 继续播放」。");
   }, (dur/(speed||1))*1000+200);
 }
 function rpRetry(){
-  const v=$("video"); const s=TALK.sentences[cur];
+  const m=rpMedia(); const s=TALK.sentences[cur];
   if(!s || s.t==null) return;
   clearListenTimer();
   rpActionsShow(false);
   $("result").classList.add("hidden");
   rp.phase="speaking"; rp.activeIdx=cur;
-  v.muted=true; v.currentTime=Math.max(0, s.t-0.1); v.play();
+  m.mute(true); m.seek(Math.max(0, s.t-0.1)); m.play();
   if(recog && !recognizing){
     recognizing=true; recBtnUI(true);
     try{ recog.start(); }catch(e){ recognizing=false; recBtnUI(false); }
@@ -728,13 +768,13 @@ function rpRetry(){
   setStatus("🎤 再来！跟着画面说这句台词…");
 }
 function rpContinue(){
-  const v=$("video");
+  const m=rpMedia();
   clearListenTimer();
   rp.phase=null; rpActionsShow(false);
-  v.muted=false;
+  m.mute(false);
   const e=rpEnd(cur);
-  if(v.currentTime < e) v.currentTime=e+0.02;
-  v.play();
+  if(m.time() < e) m.seek(e+0.02);
+  m.play();
   setStatus("");
 }
 
